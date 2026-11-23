@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Un Momentico Coaching Group — Accounts &amp; Integrations Checklist</title>
+  <style>
+    :root {
+      --bg: #111312; --panel: #191c1a; --panel2: #202420; --line: #30362f;
+      --text: #f0f1e9; --muted: #a0a79b; --green: #c5f277; --yellow: #ecc57b; --blue: #93c5fd;
+      --font: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--text); font: 14px/1.5 var(--font); }
+    .topbar {
+      background: #141714; border-bottom: 1px solid var(--line); padding: 12px 22px;
+      display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap;
+    }
+    .topbar a { color: var(--green); text-decoration: none; font-weight: 600; font-size: 13px; }
+    .wrap { max-width: 1120px; margin: 0 auto; padding: 26px 20px 60px; }
+    .head { display: flex; justify-content: space-between; align-items: flex-end; gap: 16px; flex-wrap: wrap; margin-bottom: 18px; }
+    h1 { margin: 0 0 6px; font-size: 26px; }
+    .sub { margin: 0; color: var(--muted); max-width: 72ch; }
+    .actions { display: flex; gap: 8px; flex-wrap: wrap; }
+    .btn {
+      background: var(--panel2); color: var(--text); border: 1px solid var(--line);
+      padding: 8px 14px; border-radius: 8px; font: inherit; font-weight: 600; cursor: pointer;
+    }
+    .btn.primary { background: var(--green); color: #111312; border-color: var(--green); }
+    .stats { display: grid; grid-template-columns: repeat(4, minmax(120px, 1fr)); gap: 12px; margin-bottom: 18px; }
+    .stat { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; }
+    .stat span { display: block; font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); }
+    .stat strong { font-size: 22px; }
+    .rule-banner {
+      background: #1a2118; border: 1px solid #35472d; border-radius: 10px;
+      padding: 12px 16px; margin-bottom: 18px; font-size: 13px; color: #d8e7c5;
+    }
+    .group-head {
+      margin: 18px 2px 6px; padding: 12px 16px; border-radius: 12px;
+      background: #1a2118; border: 1px solid #35472d;
+    }
+    .group-head strong { display: block; font-size: 15px; color: var(--green); }
+    .group-head small { display: block; color: var(--muted); font-size: 12.5px; margin-top: 4px; max-width: 80ch; }
+    .list { display: grid; gap: 10px; }
+    .row {
+      background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px;
+      display: grid; grid-template-columns: 32px 1.2fr 1.6fr 0.7fr 160px; gap: 12px; align-items: center;
+    }
+    .row.done { border-color: #3f5732; background: #161c15; }
+    .chk { width: 18px; height: 18px; accent-color: var(--green); cursor: pointer; }
+    .name strong { display: block; font-size: 14px; }
+    .name small { color: var(--muted); font-size: 12px; }
+    .method { font-size: 13px; color: #dbe2d5; }
+    .who { font-size: 12px; color: var(--muted); }
+    select.state {
+      width: 100%; background: var(--panel2); color: var(--text); border: 1px solid var(--line);
+      border-radius: 8px; padding: 6px 8px; font: inherit; font-size: 12px; font-weight: 600;
+    }
+    .badge {
+      display: inline-block; font-size: 10px; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.06em; padding: 2px 7px; border-radius: 999px; margin-top: 4px;
+    }
+    .b-none { background: #262b25; color: var(--muted); }
+    .b-pending { background: #362e18; color: var(--yellow); }
+    .b-connected { background: #26361b; color: var(--green); }
+    .b-manual { background: #1c2c3c; color: var(--blue); }
+    .b-na { background: #262626; color: #9ca3af; }
+    @media (max-width: 860px) { .stats { grid-template-columns: repeat(2, 1fr); } .row { grid-template-columns: 28px 1fr; } }
+    @media print {
+      body { background: #fff; color: #000; }
+      .topbar, .actions { display: none !important; }
+      .row, .stat { background: #fff; border-color: #ccc; color: #000; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <span><strong>Danny Cabrera &middot; Un Momentico Coaching Group</strong> &middot; Accounts Checklist</span>
+    <a href="../client-portal/index.html">&larr; Back to Client Portal</a>
+  </div>
+
+  <div class="wrap">
+    <div class="head">
+      <div>
+        <h1>Accounts &amp; Integrations Checklist</h1>
+        <p class="sub">Danny keeps primary ownership of every account and invites <strong>brandon@gil.marketing</strong> as User, Admin, or Partner &mdash; never share passwords, and keep everything under Un Momentico Coaching Group only.</p>
+      </div>
+      <div class="actions">
+        <button class="btn" type="button" onclick="window.print()">Print Checklist</button>
+        <button class="btn primary" type="button" id="export-btn">Export Checklist JSON</button>
+      </div>
+    </div>
+
+
+    <div class="stats">
+      <div class="stat"><span>Total Items</span><strong id="st-total">19</strong></div>
+      <div class="stat"><span>Checked Off</span><strong id="st-done">0</strong></div>
+      <div class="stat"><span>Pending Invite</span><strong id="st-pending">0</strong></div>
+      <div class="stat"><span>Connected</span><strong id="st-connected">0</strong></div>
+    </div>
+
+    <div class="list" id="rows"></div>
+  </div>
+
+  <script>
+    (function () {
+      var KEY = 'gil-accounts-checklist-danny-cabrera';
+      var ACCOUNTS = [
+        ['ig', 'Instagram (@realDancab) + Meta Business Suite', 'Priority #1 channel', 'Switch/confirm a Professional account, connect to Danny’s Meta Business Portfolio, add brandon@gil.marketing as Partner/Admin', 'Together', 'none'],
+        ['linkedin', 'LinkedIn', 'Profile found: linkedin.com/in/daniel-cabrera-4b0119124', 'Confirm this is the profile he wants used. Public details (roles, degrees, licenses) are saved to confirm — none go on the site yet. Add brandon@gil.marketing as a collaborator or page admin.', 'Together', 'none'],
+        ['x', 'X', 'Give him the option to be present here too', 'Confirm or create the handle; add brandon@gil.marketing. X can wait if we start on the three-channel free scheduler plan.', 'Together', 'none'],
+        ['tiktok', 'TikTok', 'Short-form discovery', 'Claim the handle if it is free; connect via TikTok Business Center or hand off clips manually', 'Together', 'none'],
+        ['youtube', 'YouTube (long-form + Shorts)', 'Home for the monthly sitting and the Shorts cut from it', 'Create a brand channel for Un Momentico. Invite brandon@gil.marketing as Manager. YouTube can also be connected through its API alongside the three-channel scheduler plan.', 'Together', 'none'],
+        ['domain', 'Domain Name', 'Does he already have one?', 'If not, register under Danny’s account (for example unmomenticocoaching.com) and invite brandon@gil.marketing as Member/Delegate', 'Together', 'none'],
+        ['email', 'Brand Email (Google Workspace)', 'Under Un Momentico LLC', 'Set up under Danny’s domain, separate from any medical-practice email. A free plan can start us; a paid plan with a proper warm-up is an option if his budget allows.', 'Together', 'none'],
+        ['booking', 'Booking & Payment Tool (Cal.com + Stripe; Calendly as an alternative)', 'Under the active Un Momentico LLC', 'Recommend Cal.com on the free plan: multiple session types, and it syncs with a Google or iCloud calendar. Calendly is the alternative if he prefers it. We are not using iCloud itself as a booking tool — only as a calendar he can sync. Stripe stays under the LLC for payments; payouts stay with Danny. Invite brandon@gil.marketing for scheduling setup only.', 'Together', 'none'],
+        ['newsletter', 'Newsletter Platform (Beehiiv)', 'Separate from the outreach inbox', 'Beehiiv on the free plan is the recommendation. ConvertKit and Mailchimp are not needed unless he already has one. Create under Danny’s brand email; invite brandon@gil.marketing as Writer/Admin (unsent drafts only, until Danny signs off).', 'Together', 'none'],
+        ['outreach-inbox', 'Outreach inbox (Zoho Mail, free)', 'Kept apart from his main email and newsletter', 'A separate free Zoho Mail inbox on its own outreach domain or address, so outreach does not hurt deliverability. Used for podcast, partner, and corporate outreach, at a capped daily volume. Add brandon@gil.marketing as admin. Nothing is sent until a named person signs off.', 'Together', 'none'],
+        ['google', 'Google Analytics 4 + Search Console', 'Traffic and search, once the site is live', 'Add brandon@gil.marketing as Editor (GA4) and Full User (Search Console)', 'Together', 'none'],
+        ['gbp', 'Google Business Profile (optional)', 'Only if he sees people in person in South Florida', 'Create or verify a local profile if offering in-person sessions; add brandon@gil.marketing as Manager', 'Together', 'none'],
+        ['buffer', 'Social Scheduler (Buffer)', 'Free plan covers three channels', 'Connect Instagram, LinkedIn, and TikTok on the free plan. YouTube can be connected through its API. A paid plan is an option if his budget allows, so posting is not limited to three channels. Keep this brand separate from any other Buffer work.', 'Together', 'none'],
+        ['assets', 'Brand assets folder', 'Ask Danny for a shared folder', 'Request a Google Drive or Dropbox folder with preferred photos, any logo files, conference or session clips, and anything we should not have to find online', 'Client', 'manual'],
+        ['podcast', 'Podcast audio (Spotify for Creators and Apple Podcasts)', 'Later phase, optional', 'After the YouTube sitting is running, consider distributing the audio to Spotify for Creators and Apple Podcasts. Invite brandon@gil.marketing as admin. Nothing is submitted until a named person signs off.', 'Together', 'none'],
+        ['__group__', 'Growth & authority (later phase, optional)', 'We draft and set these up; Danny signs off before anything is submitted or goes live. brandon@gil.marketing is added as admin. Not part of the first-meeting must-haves.'],
+        ['directories', 'Directory and listing profiles', 'Later phase, optional', 'We create the draft profiles; he signs off before they go live. Add brandon@gil.marketing as admin.', 'Together', 'none'],
+        ['press', 'Press-request service account', 'Later phase, optional', 'A dedicated account for incoming press requests, with brandon@gil.marketing as admin. Nothing is submitted until a named person signs off.', 'Together', 'none'],
+        ['speaker', 'Speaker page and one-sheet (on his site)', 'Later phase, optional', 'A speaker page and a one-sheet on his website, drafted by us and published only after he signs off.', 'Together', 'none'],
+        ['gbp-reviews', 'Google Business Profile review link', 'Later phase, optional', 'Once a Google Business Profile exists, set up a review link and share it when he is ready. Add brandon@gil.marketing as admin. Nothing is submitted until a named person signs off.', 'Together', 'none']
+      ];
+      var saved = {};
+      try { saved = JSON.parse(localStorage.getItem(KEY) || '{}'); } catch (e) { saved = {}; }
+      function persist() { try { localStorage.setItem(KEY, JSON.stringify(saved)); } catch (e) {} }
+      var LABELS = {
+        none: ['Not connected', 'b-none'],
+        pending: ['Pending invite', 'b-pending'],
+        connected: ['Connected', 'b-connected'],
+        manual: ['Manual import', 'b-manual'],
+        na: ['Not needed', 'b-na']
+      };
+      var container = document.getElementById('rows');
+      function isGroup(a) { return a[0] === '__group__'; }
+      function realAccounts() { return ACCOUNTS.filter(function (a) { return !isGroup(a); }); }
+      function updateStats() {
+        var done = 0, pending = 0, connected = 0;
+        realAccounts().forEach(function (a) {
+          var st = saved[a[0]] || { done: false, state: a[5] };
+          if (st.done) done++;
+          if (st.state === 'pending') pending++;
+          if (st.state === 'connected') connected++;
+        });
+        document.getElementById('st-total').textContent = realAccounts().length;
+        document.getElementById('st-done').textContent = done;
+        document.getElementById('st-pending').textContent = pending;
+        document.getElementById('st-connected').textContent = connected;
+      }
+      ACCOUNTS.forEach(function (a) {
+        if (isGroup(a)) {
+          var gh = document.createElement('div');
+          gh.className = 'group-head';
+          gh.innerHTML = '<strong>' + a[1] + '</strong><small>' + a[2] + '</small>';
+          container.appendChild(gh);
+          return;
+        }
+        var id = a[0], title = a[1], sub = a[2], method = a[3], who = a[4], defState = a[5];
+        var st = saved[id] || { done: false, state: defState };
+        var row = document.createElement('div');
+        row.className = 'row' + (st.done ? ' done' : '');
+        var chk = document.createElement('input');
+        chk.type = 'checkbox'; chk.className = 'chk'; chk.checked = !!st.done;
+        var nameCol = document.createElement('div');
+        nameCol.className = 'name';
+        var b = LABELS[st.state] || LABELS.none;
+        nameCol.innerHTML = '<strong>' + title + '</strong><small>' + sub + '</small><div><span class="badge ' + b[1] + '">' + b[0] + '</span></div>';
+        var methodCol = document.createElement('div'); methodCol.className = 'method'; methodCol.textContent = method;
+        var whoCol = document.createElement('div'); whoCol.className = 'who'; whoCol.textContent = 'Owner: ' + who;
+        var sel = document.createElement('select'); sel.className = 'state';
+        Object.keys(LABELS).forEach(function (k) {
+          var opt = document.createElement('option'); opt.value = k; opt.textContent = LABELS[k][0];
+          if (st.state === k) opt.selected = true;
+          sel.appendChild(opt);
+        });
+        chk.addEventListener('change', function () {
+          saved[id] = saved[id] || { done: false, state: defState };
+          saved[id].done = chk.checked;
+          row.className = 'row' + (chk.checked ? ' done' : '');
+          persist(); updateStats();
+        });
+        sel.addEventListener('change', function () {
+          saved[id] = saved[id] || { done: false, state: defState };
+          saved[id].state = sel.value;
+          var nb = LABELS[sel.value] || LABELS.none;
+          var badgeEl = nameCol.querySelector('.badge');
+          badgeEl.className = 'badge ' + nb[1]; badgeEl.textContent = nb[0];
+          persist(); updateStats();
+        });
+        row.appendChild(chk); row.appendChild(nameCol); row.appendChild(methodCol); row.appendChild(whoCol); row.appendChild(sel);
+        container.appendChild(row);
+      });
+      document.getElementById('export-btn').addEventListener('click', function () {
+        var blob = new Blob([JSON.stringify({ client: 'Danny Cabrera / Un Momentico Coaching Group', exported_at: new Date().toISOString(), accounts: saved }, null, 2)], { type: 'application/json' });
+        var a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'danny-cabrera-accounts-checklist.json'; a.click();
+      });
+      updateStats();
+    })();
+  </script>
+</body>
+</html>

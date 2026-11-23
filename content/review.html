@@ -1,0 +1,644 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex,nofollow">
+<title>Un Momentico — Content Review (17 pieces)</title><link rel="stylesheet" href="../preview-site/assets/fonts.css"><style>
+:root{--bg:#EAE2D3;--paper:#F4EFE5;--surface:#fffdf8;--ink:#1D1A16;--muted:#5a5247;--line:#d9ceb9;--monte:#1E3A32;--salvia:#2F4F46;--oro:#B8864B;--oro-t:#875C27;
+--ok-bg:#e6f2ec;--ok-ink:#1e5a43;--ok-line:#9fcdb6;--edit-bg:#fbf0d9;--edit-ink:#7a4f12;--edit-line:#e2bf78;--skip-bg:#eeeae3;--skip-ink:#5a5247;--skip-line:#cfc6b5;
+--serif:'Libre Caslon Text',Georgia,serif;--display:'Libre Caslon Display',Georgia,serif;--sans:'Albert Sans',ui-sans-serif,system-ui,sans-serif}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 var(--sans)}
+.topbar{position:sticky;top:0;z-index:20;background:var(--monte);color:var(--paper);padding:10px 22px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.topbar a{color:#e2c690;font-weight:600;text-decoration:none;font-size:14px}.pill-warn{background:#e2c690;color:var(--monte);font-weight:700;font-size:12px;padding:3px 10px;border-radius:4px}
+.wrap{max-width:1180px;margin:0 auto;padding:30px 22px 70px}h1{font:400 44px/1.1 var(--display);margin:0 0 8px;color:var(--monte)}.sub{margin:0;color:var(--muted);max-width:820px}
+.head{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap;margin-bottom:22px}
+.summary{display:grid;grid-template-columns:repeat(4,minmax(120px,1fr));gap:12px;margin-bottom:20px}.stat{background:var(--surface);border:1px solid var(--line);padding:14px 16px}
+.stat span{display:block;font-size:13px;color:var(--muted)}.stat strong{font:400 34px var(--display);color:var(--monte)}
+.controls{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px}.tab,.action-btn{border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:8px 14px;font:600 14px var(--sans);cursor:pointer}
+.tab.active{background:var(--salvia);color:#fff;border-color:var(--salvia)}.grid{display:grid;gap:22px}
+.item{background:var(--surface);border:1px solid var(--line);border-top:4px solid var(--oro);padding:22px 24px}
+.item-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap;margin-bottom:14px}
+.item-title{font:400 28px/1.2 var(--display);color:var(--monte);margin:4px 0 2px}.meta{font-size:14px;color:var(--muted)}
+.tag{display:inline-block;font-size:12px;font-weight:700;background:var(--paper);color:var(--salvia);border:1px solid var(--line);padding:2px 8px;margin-right:6px}
+.tag.ok{background:var(--ok-bg);color:var(--ok-ink);border-color:var(--ok-line)}
+.status-group{display:flex;gap:6px;flex-wrap:wrap}.st-btn{border:1px solid var(--line);background:#fff;color:var(--muted);padding:6px 11px;font:600 13px var(--sans);cursor:pointer}
+.st-btn.sel-approve{background:var(--ok-bg);color:var(--ok-ink);border-color:var(--ok-line)}.st-btn.sel-edit{background:var(--edit-bg);color:var(--edit-ink);border-color:var(--edit-line)}.st-btn.sel-skip{background:var(--skip-bg);color:var(--skip-ink);border-color:var(--skip-line)}
+.two{display:grid;grid-template-columns:minmax(0,440px) 1fr;gap:26px;align-items:start}
+.gallery{position:relative}.track{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:10px;scrollbar-width:thin}
+.track img{flex:0 0 100%;width:100%;aspect-ratio:4/5;scroll-snap-align:start;display:block;border:1px solid var(--line);background:var(--paper)}
+.gnav{display:flex;align-items:center;justify-content:space-between;margin-top:8px;font-size:14px;color:var(--muted)}.gnav button{border:1px solid var(--line);background:var(--paper);padding:5px 12px;cursor:pointer;font:600 14px var(--sans)}
+.caption{white-space:pre-line;background:var(--paper);border-left:3px solid var(--oro);padding:14px 16px;font-size:15px}
+h4{font:italic 400 18px var(--serif);color:var(--oro-t);margin:16px 0 6px}
+.confirm{background:var(--edit-bg);border:1px solid var(--edit-line);padding:10px 14px;font-size:14px;margin-top:14px}.confirm ul{margin:4px 0 0 18px;padding:0}
+.links{font-size:14px;margin-top:10px}.links a{color:var(--salvia);font-weight:600;margin-right:14px}
+video{width:100%;margin-top:12px;border:1px solid var(--line);background:#000}
+.script dt{font-weight:700;color:var(--salvia);margin-top:10px}.script dd{margin:2px 0 0}.hook{font:400 22px/1.35 var(--serif);color:var(--monte)}
+.longform{border-top:1px solid var(--line);margin-top:12px;padding-top:6px}.longform summary{cursor:pointer;font-weight:700;color:var(--salvia);padding:6px 0}
+.doc{max-width:760px;font:17px/1.65 var(--serif)}.doc h1,.doc h2{font-family:var(--display);font-weight:400;color:var(--monte)}.doc h2{font-size:28px;margin-top:28px}.doc blockquote{border-left:3px solid var(--oro);margin:0;padding:4px 16px;background:var(--paper)}
+.note-box{margin-top:14px;width:100%;padding:8px 10px;border:1px solid var(--line);font:14px var(--sans);background:var(--paper)}
+@media(max-width:820px){.two{grid-template-columns:1fr}.summary{grid-template-columns:repeat(2,1fr)}}
+@media print{.topbar,.controls,.status-group,.gnav,video{display:none!important}.item{break-inside:avoid}.track{flex-wrap:wrap}.track img{flex:0 0 30%}}
+</style></head><body>
+<div class="topbar"><div><span class="pill-warn">Drafts — not scheduled or posted</span> &nbsp; Danny Cabrera · Un Momentico Coaching Group</div><a href="../client-portal/index.html">&larr; Back to Client Portal</a></div>
+<div class="wrap"><div class="head"><div><h1>Content review</h1><p class="sub">17 pieces: 5 designed carousels and 5 video scripts (each with its caption attached), 1 newsletter, 2 blog posts, 3 outreach samples, and 1 long-form episode package. Outreach notes and the long-form package are unsent drafts — nothing is emailed or published until a named person signs off. Warm, mostly English, Spanish where it fits. Signed <em>Blessings and love.</em> For spiritual and personal insight; no guaranteed outcomes. Draft files live in <code>content/drafts/</code>.</p></div>
+<div style="display:flex;gap:8px;flex-wrap:wrap"><button class="action-btn" type="button" onclick="window.print()">Print</button><button class="action-btn" type="button" id="export-btn">Export review JSON</button></div></div>
+<div class="summary"><div class="stat"><span>Total pieces</span><strong id="cnt-total">17</strong></div><div class="stat"><span>Approved</span><strong id="cnt-approve">1</strong></div><div class="stat"><span>Needs edit</span><strong id="cnt-edit">0</strong></div><div class="stat"><span>Unreviewed</span><strong id="cnt-pending">16</strong></div></div>
+<div class="controls" role="tablist"><button class="tab active" data-cat="all" type="button">All (17)</button><button class="tab" data-cat="carousel" type="button">Carousels (5)</button><button class="tab" data-cat="video" type="button">Video scripts (5)</button><button class="tab" data-cat="newsletter" type="button">Newsletter (1)</button><button class="tab" data-cat="blog" type="button">Blogs (2)</button><button class="tab" data-cat="outreach" type="button">Outreach samples (3)</button><button class="tab" data-cat="longform" type="button">Long-form (1)</button></div>
+<div class="grid" id="cards"><article class="item" data-id="carousel-1" data-cat="carousel">
+<div class="item-head"><div><span class="tag">Carousel 1 · 7 slides · 1080×1350</span><span class="tag">What a session is (and isn&#x27;t)</span><div class="item-title">What a first session actually feels like</div><div class="meta">Remove the fear of booking a first session. Save + share.</div></div><div class="status-group"></div></div>
+<div class="two"><div><div class="gallery"><div class="track"><img loading="lazy" src="drafts/carousels/1/slide-01.png" alt="Carousel 1, slide 1"><img loading="lazy" src="drafts/carousels/1/slide-02.png" alt="Carousel 1, slide 2"><img loading="lazy" src="drafts/carousels/1/slide-03.png" alt="Carousel 1, slide 3"><img loading="lazy" src="drafts/carousels/1/slide-04.png" alt="Carousel 1, slide 4"><img loading="lazy" src="drafts/carousels/1/slide-05.png" alt="Carousel 1, slide 5"><img loading="lazy" src="drafts/carousels/1/slide-06.png" alt="Carousel 1, slide 6"><img loading="lazy" src="drafts/carousels/1/slide-07.png" alt="Carousel 1, slide 7"></div><div class="gnav"><button type="button" data-dir="-1">&larr;</button><span class="count">1 / 7</span><button type="button" data-dir="1">&rarr;</button></div></div><video controls muted loop playsinline preload="metadata" src="drafts/carousels/1/animated/preview.mp4"></video><div class="meta">Motion version (preview.mp4, plus one MP4 per slide in <code>animated/</code>)</div></div>
+<div><h4>Caption (attached to this carousel)</h4><div class="caption">Here&#x27;s what nobody tells you about a first session: you don&#x27;t have to have the right words.
+
+We slow down. You talk, I listen. There&#x27;s no script and nothing to perform. It&#x27;s scheduled for one hour, and I always leave extra time, because your session ends when you&#x27;re ready, not when the clock says.
+
+Swipe through so you know exactly what to expect, then save it for the day you&#x27;re ready.
+
+Sessions in English or Spanish. Open to people of every faith, and of none.
+
+Blessings and love.
+
+#spiritualguidance #lifepurposecoach #miami #unmomentico
+
+For spiritual and personal insight. Not a substitute for medical, psychological, legal or financial advice.</div><h4>English / Spanish</h4><div>Spanish caption variant optional: &quot;Tu primera sesión, minuto a minuto. Aquí no hay apuro.&quot; Slides stay English for now.</div>
+<div class="confirm"><strong>To confirm before posting</strong><ul><li>One-hour length, buffer time and the signature line (Brandon&#x27;s account; confirm with Danny).</li><li>In person vs. virtual is not stated on purpose until Danny confirms.</li></ul></div>
+<div class="links"><a href="drafts/carousels/1/contact-sheet.png" target="_blank">Contact sheet</a><a href="drafts/carousels/1/caption.md" target="_blank">Slide copy</a></div></div></div></article><article class="item" data-id="carousel-2" data-cat="carousel">
+<div class="item-head"><div><span class="tag">Carousel 2 · 7 slides · 1080×1350</span><span class="tag">Grief and connection / myth-busting</span><div class="item-title">5 things people get wrong about mediumship</div><div class="meta">Make mediumship approachable and honest. Saves + shares to someone grieving.</div></div><div class="status-group"></div></div>
+<div class="two"><div><div class="gallery"><div class="track"><img loading="lazy" src="drafts/carousels/2/slide-01.png" alt="Carousel 2, slide 1"><img loading="lazy" src="drafts/carousels/2/slide-02.png" alt="Carousel 2, slide 2"><img loading="lazy" src="drafts/carousels/2/slide-03.png" alt="Carousel 2, slide 3"><img loading="lazy" src="drafts/carousels/2/slide-04.png" alt="Carousel 2, slide 4"><img loading="lazy" src="drafts/carousels/2/slide-05.png" alt="Carousel 2, slide 5"><img loading="lazy" src="drafts/carousels/2/slide-06.png" alt="Carousel 2, slide 6"><img loading="lazy" src="drafts/carousels/2/slide-07.png" alt="Carousel 2, slide 7"></div><div class="gnav"><button type="button" data-dir="-1">&larr;</button><span class="count">1 / 7</span><button type="button" data-dir="1">&rarr;</button></div></div><video controls muted loop playsinline preload="metadata" src="drafts/carousels/2/animated/preview.mp4"></video><div class="meta">Motion version (preview.mp4, plus one MP4 per slide in <code>animated/</code>)</div></div>
+<div><h4>Caption (attached to this carousel)</h4><div class="caption">Most of what people believe about mediumship comes from TV. Here&#x27;s what it actually looks like when I sit with someone.
+
+No theatrics. No promises of who will come through. Just a careful, quiet space to listen, for people of every faith and of none.
+
+Myth 3 is the one I want everyone to read twice.
+
+If you&#x27;re carrying someone with you today, save this, or send it to someone who is.
+
+Blessings and love.
+
+#mediumship #grief #lovedones #spiritualguidance #miami
+
+For spiritual and personal insight. Not a substitute for medical, psychological, legal or financial advice.</div><h4>English / Spanish</h4><div>Strong candidate for a Spanish twin deck later (&quot;5 mitos sobre la mediumnidad&quot;). Wording needs Danny&#x27;s approval first.</div>
+<div class="confirm"><strong>To confirm before posting</strong><ul><li>Exact public wording for mediumship (to confirm with Danny — not on slides).</li><li>Whether DMs are open for questions (CTA says questions welcome).</li></ul></div>
+<div class="links"><a href="drafts/carousels/2/contact-sheet.png" target="_blank">Contact sheet</a><a href="drafts/carousels/2/caption.md" target="_blank">Slide copy</a></div></div></div></article><article class="item" data-id="carousel-3" data-cat="carousel">
+<div class="item-head"><div><span class="tag">Carousel 3 · 7 slides · 1080×1350</span><span class="tag">His story: from service to calling</span><div class="item-title">From emergency calls to sacred conversations</div><div class="meta">Build trust through his real background. Follows + profile visits.</div></div><div class="status-group"></div></div>
+<div class="two"><div><div class="gallery"><div class="track"><img loading="lazy" src="drafts/carousels/3/slide-01.png" alt="Carousel 3, slide 1"><img loading="lazy" src="drafts/carousels/3/slide-02.png" alt="Carousel 3, slide 2"><img loading="lazy" src="drafts/carousels/3/slide-03.png" alt="Carousel 3, slide 3"><img loading="lazy" src="drafts/carousels/3/slide-04.png" alt="Carousel 3, slide 4"><img loading="lazy" src="drafts/carousels/3/slide-05.png" alt="Carousel 3, slide 5"><img loading="lazy" src="drafts/carousels/3/slide-06.png" alt="Carousel 3, slide 6"><img loading="lazy" src="drafts/carousels/3/slide-07.png" alt="Carousel 3, slide 7"></div><div class="gnav"><button type="button" data-dir="-1">&larr;</button><span class="count">1 / 7</span><button type="button" data-dir="1">&rarr;</button></div></div><video controls muted loop playsinline preload="metadata" src="drafts/carousels/3/animated/preview.mp4"></video><div class="meta">Motion version (preview.mp4, plus one MP4 per slide in <code>animated/</code>)</div></div>
+<div><h4>Caption (attached to this carousel)</h4><div class="caption">For years my work was inside other people&#x27;s hardest moments: public-safety communications at Hialeah Police and Fire, and eight years in the Army National Guard.
+
+It taught me the thing I still lean on every session: people need to be heard before they can be helped.
+
+Same service. Different room. Swipe for the three lessons I still use.
+
+Blessings and love.
+
+#hialeah #service #lifepurpose #faith #unmomentico</div><h4>English / Spanish</h4><div>English first. A Spanish version of slide 3 (&quot;La gente necesita ser escuchada antes de poder ser ayudada&quot;) would work as a standalone quote post.</div>
+<div class="confirm"><strong>To confirm before posting</strong><ul><li>TO CONFIRM: Hialeah Police and Fire, public-safety communications / QA supervisor, 2006–2015 (LinkedIn snippet).</li><li>TO CONFIRM: Florida Army National Guard, 2009–2017 (LinkedIn snippet; &#x27;eight years&#x27;).</li><li>TO CONFIRM: MBA in Process Improvement, Nova Southeastern (LinkedIn snippet).</li><li>TO CONFIRM: story beats and the &#x27;answer the call&#x27; framing are proposed; Danny must approve before anything goes out.</li><li>Slide 5 quote extends his verified phrase &#x27;Knowing that we all have God given gifts...&#x27;; the rest is proposed.</li></ul></div>
+<div class="links"><a href="drafts/carousels/3/contact-sheet.png" target="_blank">Contact sheet</a><a href="drafts/carousels/3/caption.md" target="_blank">Slide copy</a></div></div></div></article><article class="item" data-id="carousel-4" data-cat="carousel">
+<div class="item-head"><div><span class="tag">Carousel 4 · 7 slides · 1080×1350</span><span class="tag">Purpose and God-given gifts</span><div class="item-title">4 questions to find the gifts already placed in you</div><div class="meta">High-save value post. A tool people come back to.</div></div><div class="status-group"></div></div>
+<div class="two"><div><div class="gallery"><div class="track"><img loading="lazy" src="drafts/carousels/4/slide-01.png" alt="Carousel 4, slide 1"><img loading="lazy" src="drafts/carousels/4/slide-02.png" alt="Carousel 4, slide 2"><img loading="lazy" src="drafts/carousels/4/slide-03.png" alt="Carousel 4, slide 3"><img loading="lazy" src="drafts/carousels/4/slide-04.png" alt="Carousel 4, slide 4"><img loading="lazy" src="drafts/carousels/4/slide-05.png" alt="Carousel 4, slide 5"><img loading="lazy" src="drafts/carousels/4/slide-06.png" alt="Carousel 4, slide 6"><img loading="lazy" src="drafts/carousels/4/slide-07.png" alt="Carousel 4, slide 7"></div><div class="gnav"><button type="button" data-dir="-1">&larr;</button><span class="count">1 / 7</span><button type="button" data-dir="1">&rarr;</button></div></div><video controls muted loop playsinline preload="metadata" src="drafts/carousels/4/animated/preview.mp4"></video><div class="meta">Motion version (preview.mp4, plus one MP4 per slide in <code>animated/</code>)</div></div>
+<div><h4>Caption (attached to this carousel)</h4><div class="caption">Knowing that we all have God given gifts... most of us still struggle to name ours.
+
+These four questions help. Grab a pen, answer honestly (not impressively), and look for the answer that shows up twice.
+
+Then do what I always come back to: discern, then proceed with more light and love.
+
+Which question stopped you? Tell me the number below.
+
+Blessings and love.
+
+#purpose #godgivengifts #lifepurposecoach #discernment</div><h4>English / Spanish</h4><div>Works well bilingual: add a Spanish line under each question (&quot;¿Para qué te buscan ya los demás?&quot;) in a v2 if Danny wants more Spanish.</div>
+<div class="confirm"><strong>To confirm before posting</strong><ul><li>Comment CTA assumes Danny (or Gil) will reply to comments; no DM automation is promised.</li></ul></div>
+<div class="links"><a href="drafts/carousels/4/contact-sheet.png" target="_blank">Contact sheet</a><a href="drafts/carousels/4/caption.md" target="_blank">Slide copy</a></div></div></div></article><article class="item" data-id="carousel-5" data-cat="carousel">
+<div class="item-head"><div><span class="tag">Carousel 5 · 6 slides · 1080×1350</span><span class="tag">Bilingual &#x27;Un Momentico&#x27; reflection</span><div class="item-title">Un momentico: a 60-second pause (EN/ES)</div><div class="meta">Signature brand ritual. Shares + saves, bilingual reach.</div></div><div class="status-group"></div></div>
+<div class="two"><div><div class="gallery"><div class="track"><img loading="lazy" src="drafts/carousels/5/slide-01.png" alt="Carousel 5, slide 1"><img loading="lazy" src="drafts/carousels/5/slide-02.png" alt="Carousel 5, slide 2"><img loading="lazy" src="drafts/carousels/5/slide-03.png" alt="Carousel 5, slide 3"><img loading="lazy" src="drafts/carousels/5/slide-04.png" alt="Carousel 5, slide 4"><img loading="lazy" src="drafts/carousels/5/slide-05.png" alt="Carousel 5, slide 5"><img loading="lazy" src="drafts/carousels/5/slide-06.png" alt="Carousel 5, slide 6"></div><div class="gnav"><button type="button" data-dir="-1">&larr;</button><span class="count">1 / 6</span><button type="button" data-dir="1">&rarr;</button></div></div><video controls muted loop playsinline preload="metadata" src="drafts/carousels/5/animated/preview.mp4"></video><div class="meta">Motion version (preview.mp4, plus one MP4 per slide in <code>animated/</code>)</div></div>
+<div><h4>Caption (attached to this carousel)</h4><div class="caption">In a Cuban home, when someone says &quot;un momentico,&quot; you stop what you&#x27;re doing. It never meant just a second. It meant: be here.
+
+Here&#x27;s a 60-second momentico you can take anywhere. Stop. Breathe. Ask. Choose.
+
+En español: Para. Respira. Pregunta. Escoge. Aquí no hay apuro.
+
+Save it for the next time life gets loud.
+
+Blessings and love. Bendiciones y amor.
+
+#unmomentico #bilingual #miami #mindfulfaith</div><h4>English / Spanish</h4><div>Bilingual by design. Spanish is written natively (Cuban warmth), not machine-translated; Danny should still read it aloud once to confirm it sounds like him.</div>
+<div class="confirm"><strong>To confirm before posting</strong><ul><li>Comfort with Spanish in public posts (his own captions have been English so far).</li><li>Origin story of the name &#x27;Un Momentico&#x27; — this deck uses the general Cuban meaning only.</li></ul></div>
+<div class="links"><a href="drafts/carousels/5/contact-sheet.png" target="_blank">Contact sheet</a><a href="drafts/carousels/5/caption.md" target="_blank">Slide copy</a></div></div></div></article><article class="item" data-id="video-1" data-cat="video">
+<div class="item-head"><div><span class="tag">Video script 1 · 45–60s talking head</span><span class="tag">His story: from service to calling</span><div class="item-title">What years in public safety taught me about listening</div><div class="meta">On-screen headline: <strong>Heard before helped</strong></div></div><div class="status-group"></div></div>
+<div class="two"><dl class="script"><dt>Hook (0–2s)</dt><dd class="hook">“For years, my job was making sure that when someone called on the worst day of their life, the person on the other end got it right.”</dd><dt>Open loop</dt><dd>“And the thing that mattered most on those calls wasn&#x27;t speed. I&#x27;ll tell you what it was.”</dd><dt>Story</dt><dd><ul><li>I worked in public-safety communications at Hialeah Police and Fire. I listened to a lot of calls. Hard ones.</li><li>The best people on that floor weren&#x27;t the fastest talkers. They were the ones who let the caller finish. Who stayed calm so the person on the line could breathe.</li><li>Because the real reason someone calls is almost never in the first sentence.</li></ul></dd>
+<dt>Takeaway</dt><dd>“People need to be heard before they can be helped. That&#x27;s still the first thing I do in every session.”</dd><dt>Soft CTA</dt><dd>“If you&#x27;ve been waiting for someone to just listen, follow along. I&#x27;m Danny.” Blessings and love.</dd></dl>
+<div><h4>Caption (attached to this video)</h4><div class="caption">For years I listened to people on the worst day of their lives. The lesson I took with me: people need to be heard before they can be helped.
+
+That&#x27;s still where every session starts.
+
+Blessings and love.
+
+#hialeah #listening #lifepurposecoach #unmomentico</div><h4>On-screen text</h4><div>Heard before helped · Hialeah Police and Fire · The real reason is rarely the first sentence · Heard → then helped</div><h4>B-roll ideas</h4><ul><li>Slow push-in on Danny seated, warm window light</li><li>Hands around a coffee cup</li><li>An old-style desk phone or headset on a table (no agency logos)</li><li>Hialeah street at golden hour</li></ul><h4>English / Spanish</h4><div>Film an ES version later: &quot;La gente necesita ser escuchada antes de poder ser ayudada.&quot;</div>
+<div class="confirm"><strong>To confirm before filming</strong><ul><li>TO CONFIRM: Hialeah Police and Fire, public-safety communications (LinkedIn snippet, 2006–2015).</li><li>Do not add specific call stories; keep it general unless Danny shares one he&#x27;s comfortable telling.</li></ul></div></div></div></article><article class="item" data-id="video-2" data-cat="video">
+<div class="item-head"><div><span class="tag">Video script 2 · 45–60s talking head</span><span class="tag">Grief and connection</span><div class="item-title">If you&#x27;re grieving and the world kept moving</div><div class="meta">On-screen headline: <strong>Monday still comes</strong></div></div><div class="status-group"></div></div>
+<div class="two"><dl class="script"><dt>Hook (0–2s)</dt><dd class="hook">“The hardest part of losing someone? Monday still comes.”</dd><dt>Open loop</dt><dd>“There&#x27;s one thing I tell everyone who sits with me in grief, and it&#x27;s not &quot;they&#x27;re in a better place.&quot;”</dd><dt>Story</dt><dd><ul><li>The world keeps moving. Work emails. Groceries. People stop asking how you&#x27;re doing after a few weeks.</li><li>But your heart is still in that moment. And it feels like you&#x27;re the only one who didn&#x27;t move on.</li><li>When people sit with me in grief, we don&#x27;t rush it. Sometimes we just talk about the person. Their laugh. Their habits. And sometimes, when the gift is present, a message comes through. I never promise that. But I hold the space for it.</li></ul></dd>
+<dt>Takeaway</dt><dd>“Here&#x27;s what I tell them: you don&#x27;t have to finish grieving to keep living. Grief doesn&#x27;t need a timeline. It needs a place to land.”</dd><dt>Soft CTA</dt><dd>“If you&#x27;re carrying someone today, save this. Or send it to someone who is.” Blessings and love.</dd></dl>
+<div><h4>Caption (attached to this video)</h4><div class="caption">The hardest part of losing someone is that Monday still comes.
+
+Grief doesn&#x27;t need a timeline. It needs a place to land. If you&#x27;re carrying someone today, this one is for you.
+
+Blessings and love.
+
+#grief #lovedones #mediumship #healing
+
+For spiritual and personal insight. Not a substitute for medical, psychological, legal or financial advice.</div><h4>On-screen text</h4><div>Monday still comes · Grief doesn&#x27;t need a timeline · It needs a place to land · No promises, just a place to land</div><h4>B-roll ideas</h4><ul><li>Empty chair at a kitchen table, morning light</li><li>Hands holding an old photo (no faces of real family)</li><li>Candle being lit</li><li>Danny looking out a window</li></ul><h4>English / Spanish</h4><div>Strong ES candidate: &quot;El lunes sigue llegando.&quot; Spanish-speaking families may connect with it more.</div>
+<div class="confirm"><strong>To confirm before filming</strong><ul><li>Mediumship line wording (MEDIUMSHIP_WORDING_TO_CONFIRM).</li><li>No guaranteed messages — keep the &#x27;I never promise that&#x27; line.</li></ul></div></div></div></article><article class="item" data-id="video-3" data-cat="video">
+<div class="item-head"><div><span class="tag">Video script 3 · 40–55s talking head</span><span class="tag">What a session is and isn&#x27;t / myth-busting</span><div class="item-title">Mediumship isn&#x27;t what the movies show</div><div class="meta">On-screen headline: <strong>Not like the movies</strong></div></div><div class="status-group"></div></div>
+<div class="two"><dl class="script"><dt>Hook (0–2s)</dt><dd class="hook">“Forget what you&#x27;ve seen on TV. Here&#x27;s what mediumship actually looks like in my room.”</dd><dt>Open loop</dt><dd>“And the part that surprises people most happens at the very end.”</dd><dt>Story</dt><dd><ul><li>No crystal ball. No dramatic voice. It&#x27;s two people, sitting, listening.</li><li>Sometimes impressions come: a name, a memory, a feeling. I share them carefully and you tell me if they mean something. Sometimes nothing comes, and that&#x27;s okay too. We still talk about what&#x27;s on your heart.</li><li>And at the end? Most people don&#x27;t ask about the messages. They ask: &quot;How do I keep living with this love?&quot;</li></ul></dd>
+<dt>Takeaway</dt><dd>“Mediumship, done with care, isn&#x27;t about proof. It&#x27;s about connection, and what you do with it next.”</dd><dt>Soft CTA</dt><dd>“Questions about how this works? Ask me in the comments. I&#x27;ll answer the common ones in a future video.” Blessings and love.</dd></dl>
+<div><h4>Caption (attached to this video)</h4><div class="caption">No crystal ball. No dramatic voice. Here&#x27;s what mediumship actually looks like when I sit with someone, and what most people ask at the end.
+
+Questions? Ask below. I&#x27;ll answer the common ones.
+
+Blessings and love.
+
+#mediumship #spiritualguidance #grief #miami
+
+For spiritual and personal insight. Not a substitute for medical, psychological, legal or financial advice.</div><h4>On-screen text</h4><div>Not like the movies · Two people. Listening. · No promises · Connection, not proof</div><h4>B-roll ideas</h4><ul><li>Two chairs facing each other</li><li>Notebook and pen</li><li>Close-up of hands in a relaxed, open posture</li></ul><h4>English / Spanish</h4><div>Caption-only Spanish line is enough for v1.</div>
+<div class="confirm"><strong>To confirm before filming</strong><ul><li>Mediumship description and the &#x27;impressions&#x27; wording need Danny&#x27;s approval.</li><li>Comment-answer CTA means someone commits to a follow-up video.</li></ul></div></div></div></article><article class="item" data-id="video-4" data-cat="video">
+<div class="item-head"><div><span class="tag">Video script 4 · 30–40s talking head, bilingual</span><span class="tag">Bilingual &#x27;Un Momentico&#x27; reflection</span><div class="item-title">What &quot;un momentico&quot; means (EN/ES)</div><div class="meta">On-screen headline: <strong>Un momentico</strong></div></div><div class="status-group"></div></div>
+<div class="two"><dl class="script"><dt>Hook (0–2s)</dt><dd class="hook">“In a Cuban home, when someone says &quot;un momentico,&quot; you stop what you&#x27;re doing.”</dd><dt>Open loop</dt><dd>“It sounds like &quot;just a second.&quot; It&#x27;s not. Here&#x27;s what it really means.”</dd><dt>Story</dt><dd><ul><li>Un momentico was never about time. It meant: sit down. Look at me. Be here.</li><li>En mi casa, un momentico era una pausa de verdad. Dejabas todo y prestabas atención.</li><li>That&#x27;s what this work is. A real pause in a life that never stops.</li></ul></dd>
+<dt>Takeaway</dt><dd>“Today, take one. Phone down, three breaths, and ask: am I moving from fear, or from love?”</dd><dt>Soft CTA</dt><dd>“Follow for a momentico every week. En inglés y en español.” Blessings and love. Bendiciones y amor.</dd></dl>
+<div><h4>Caption (attached to this video)</h4><div class="caption">Un momentico was never about time. It meant: be here.
+
+Take one today. Phone down. Three breaths. Ask: am I moving from fear, or from love?
+
+Bendiciones y amor.
+
+#unmomentico #cubano #bilingual #miami</div><h4>On-screen text</h4><div>Un momentico · Not &quot;just a second&quot; · Sit down. Be here. · ¿Miedo o amor?</div><h4>B-roll ideas</h4><ul><li>Cafecito being poured</li><li>A doorway with a medio punto window</li><li>Danny&#x27;s hands setting a phone face down</li></ul><h4>English / Spanish</h4><div>Bilingual by design; the Spanish line should be said in Danny&#x27;s own words if he prefers.</div>
+<div class="confirm"><strong>To confirm before filming</strong><ul><li>Line &#x27;En mi casa...&#x27; implies his family home; confirm he&#x27;s comfortable with that framing.</li></ul></div></div></div></article><article class="item" data-id="video-5" data-cat="video">
+<div class="item-head"><div><span class="tag">Video script 5 · 40–55s talking head</span><span class="tag">Family and faith / openness</span><div class="item-title">My faith is my story, not your requirement</div><div class="meta">On-screen headline: <strong>All faiths. And none.</strong></div></div><div class="status-group"></div></div>
+<div class="two"><dl class="script"><dt>Hook (0–2s)</dt><dd class="hook">“I&#x27;m a man of deep faith, and I sit with people who don&#x27;t share it. Every week.”</dd><dt>Open loop</dt><dd>“People ask me how that works. The answer is simpler than you&#x27;d think.”</dd><dt>Story</dt><dd><ul><li>My faith is my story. It&#x27;s how I was raised, it&#x27;s how I try to raise my family, and it&#x27;s what moves me to do this work.</li><li>But it&#x27;s not a test you have to pass to sit with me. People come from every tradition. Some from none. Some are still searching.</li><li>I&#x27;m open about the spirit, energy and faith that guide me. And I&#x27;ll honor whatever you bring in with you.</li></ul></dd>
+<dt>Takeaway</dt><dd>“The only thing I ask is that you arrive open. That&#x27;s it.”</dd><dt>Soft CTA</dt><dd>“If that sounds like the kind of space you&#x27;ve been looking for, follow along.” Blessings and love.</dd></dl>
+<div><h4>Caption (attached to this video)</h4><div class="caption">My faith is my story, not your requirement.
+
+People of every faith, and of none, sit with me. The only thing I ask is that you arrive open.
+
+Blessings and love.
+
+#faith #spiritualguidance #allfaiths #unmomentico</div><h4>On-screen text</h4><div>All faiths. And none. · My story, not your requirement · Just arrive open</div><h4>B-roll ideas</h4><ul><li>Rosary or church interior (only if Danny is comfortable)</li><li>Family dinner table from behind (no faces, no children shown)</li><li>Open door, light coming through</li></ul><h4>English / Spanish</h4><div>Good Spanish candidate: &quot;Mi fe es mi historia, no tu requisito.&quot;</div>
+<div class="confirm"><strong>To confirm before filming</strong><ul><li>Comfort naming his faith (Catholic) publicly; script says &#x27;deep faith&#x27; without naming it.</li><li>No children shown or named; family referenced only in general.</li></ul></div></div></div></article><article class="item" data-id="newsletter-1" data-cat="newsletter" data-default="approve">
+<div class="item-head"><div><span class="tag">Newsletter · Issue #1 · unsent</span><span class="tag ok">Approved in concept by Brandon</span><div class="item-title">Un Momentico — Issue #1</div><div class="meta">First-session feel, a weekly discernment question, and a gentle note for anyone carrying grief. Full issue below.</div></div><div class="status-group"></div></div>
+<details class="longform"><summary>Read the full draft</summary><div class="doc"><h1>Un Momentico — Issue #1 (unsent draft)</h1>
+<p><strong>Status:</strong> Approved in concept by Brandon (23 Nov 2026): first-session feel, a weekly discernment question, a gentle note for anyone carrying grief. Final wording still needs Danny's sign-off. Nothing is sent: it needs an opted-in list and Danny's approval first.
+<strong>Pillars:</strong> What a session is · Pause and discern · Grief and connection
+<strong>Length:</strong> ~650 words (a 3-minute read)</p>
+<p><strong>Subject line (pick one):</strong>
+1. Take un momentico with me
+2. What a first session actually feels like
+3. A question for this week, and a note for anyone grieving</p>
+<p><strong>Preview text:</strong> No script, no rush. Plus one question to sit with this week.</p>
+<hr />
+<p>Hola, and welcome.</p>
+<p>This is the first note from Un Momentico. If you're reading it, you either know me, or someone thought you might need a pause. Either way, I'm grateful you're here.</p>
+<p>In a Cuban home, when someone says <em>"un momentico,"</em> you stop what you're doing. It never meant "just a second." It meant: sit down, look at me, be here. That's what I want these notes to be. A few quiet minutes in a week that probably hasn't been quiet.</p>
+<p>Each issue will have three small things: something about how this work actually happens, one question to sit with, and a word for anyone who's carrying something heavy.</p>
+<h2>What a first session actually feels like</h2>
+<p>People tell me they were nervous before their first session. They didn't know what to say, or whether they had to believe something to come in.</p>
+<p>Here's the truth: you don't have to prepare anything.</p>
+<p>We slow down. You talk, I listen. Some people come with one clear question. Some come with a feeling they can't name yet. Both are welcome. There's no script, and there's nothing to perform.</p>
+<p>I'm open about the spirit, energy and faith that guide my own life. That's my story. It isn't a requirement for yours. People of every faith, and of none, sit with me. The only thing I ask is that you arrive open.</p>
+<p>Sessions are scheduled for one hour, and I always leave extra time after. I don't believe in cutting someone off in the middle of something important. <strong>Your session ends when you're ready, not when the clock says.</strong></p>
+<p>Most people leave with one thing to sit with, and one small step for the week. Not ten. One.</p>
+<h2>This week's question</h2>
+<blockquote>
+<p><strong>Where in my life am I staying busy so I don't have to sit with what my heart already knows?</strong></p>
+</blockquote>
+<p>Try this: find five quiet minutes. Phone face down. Three slow breaths. Read the question twice, then write whatever comes first, without editing it.</p>
+<p>Then ask a second, smaller question: <em>Am I moving from fear, or from love?</em></p>
+<p>You don't have to act on everything you write. Pick one honest step and take it before the week is over. Discern, then proceed with more light and love.</p>
+<h2>For anyone carrying grief</h2>
+<p>If someone you love has passed, I want you to hear this clearly: you don't have to be "over it" to keep living, and you don't have to carry it alone.</p>
+<p>Grief doesn't follow a timeline. It shows up in a song at the grocery store, or on a Tuesday that should have been ordinary. That's not you doing grief wrong. That's love with nowhere to go.</p>
+<p>In some sessions I offer medium guidance: a respectful opening to receive messages from loved ones who have passed, when that gift is present. I hold it with care and humility, and I never promise a specific message or outcome. Sometimes the most important part of the hour is simply talking about the person: their laugh, their habits, the way they said your name.</p>
+<p>If that's where you are, this space is open to you. And please keep leaning on your doctor, your counselor and your people too. This work sits alongside them, not in place of them.</p>
+<h2>Until next week</h2>
+<p>Reply to this email and tell me what you'd like me to write about next. I read every reply.</p>
+<p>Blessings and love,
+Danny</p>
+<p><em>Un Momentico Coaching Group · @realDancab</em></p>
+<hr />
+<p><strong>Footer (required before any send):</strong> You're receiving this because you signed up for Un Momentico notes. Unsubscribe anytime. This note is for spiritual and personal insight and is not a substitute for medical, psychological, legal or financial advice.</p>
+<p><strong>Notes for review:</strong>
+- "In a Cuban home..." meaning: general cultural meaning, not a claim about his specific family. Confirm Danny is happy with it.
+- Mediumship paragraph uses the careful wording (to confirm with Danny).
+- No booking link: none is live yet. Add one only when booking exists.</p></div></details>
+<div class="links"><a href="drafts/newsletter-issue-01.md" target="_blank">Open markdown</a></div></article><article class="item" data-id="blog-1" data-cat="blog">
+<div class="item-head"><div><span class="tag">Blog 1 · ~1,050 words</span><div class="item-title">What a first session actually feels like</div><div class="meta">Pillar: what a session is (and isn’t). Full draft with meta title and description.</div></div><div class="status-group"></div></div>
+<details class="longform"><summary>Read the full draft</summary><div class="doc"><h1>Blog 1 — What a first session actually feels like</h1>
+<p><strong>Status:</strong> Full draft for review. Brandon liked the topic. Not published.
+<strong>Pillar:</strong> What a session is (and isn't)
+<strong>Suggested URL:</strong> <code>/journal/what-a-first-session-feels-like/</code>
+<strong>Meta title (≤60):</strong> What a First Session Feels Like | Un Momentico
+<strong>Meta description (≤155):</strong> Nervous about a first spiritual guidance session? Here's what actually happens with Danny Cabrera: no script, no rush, and a session that ends when you're ready.
+<strong>Length:</strong> ~1,050 words</p>
+<hr />
+<h2>The short answer</h2>
+<p>A first session with me is a calm, one-on-one conversation. It's scheduled for one hour, with extra time built in afterwards. You don't need to prepare anything or share my faith. We slow down, you talk, I listen, and you leave with one honest thing to sit with. Your session ends when you're ready, not when the clock says.</p>
+<h2>"I didn't know what to say"</h2>
+<p>Almost everyone tells me some version of this after their first session: <em>"I was nervous. I didn't know what I was supposed to say."</em></p>
+<p>I understand. Most of us have never sat with someone whose only job, for an hour, is to listen to us. We're used to appointments with a clipboard, a timer and a next patient waiting in the hall. So it makes sense to walk in braced for that.</p>
+<p>That's not what happens here. Let me walk you through it, so the only surprise is how unhurried it feels.</p>
+<h2>Before you arrive</h2>
+<p>You don't have to prepare anything. Really.</p>
+<p>Some people come with a clear question: a decision at work, a relationship, a move, a sense that their life isn't lined up with what they're meant to do. Others come with something they can't name yet, just a heaviness or a restlessness. Both are completely welcome. Sometimes the real question shows up halfway through the hour.</p>
+<p>You also don't need to believe what I believe. I'm open about the spirit, energy and faith that guide my own life. That's my story and my motivation. It isn't a test you have to pass. People of every faith, and of none, sit with me. The only thing I ask is that you arrive open.</p>
+<p>Sessions can happen in English or in Spanish, or in the mix of both that a lot of us in South Florida actually speak at home.</p>
+<h2>The first ten minutes</h2>
+<p>We start by slowing down. That's it. No forms to fill out in front of me, no speech about my credentials.</p>
+<p>I'll ask what's on your heart, and then I'll mostly be quiet. You can start anywhere. If you start in the middle, that's fine. If you start with "I don't know why I'm here," that's often the most honest beginning there is.</p>
+<p>Most people let out a breath in those first minutes that they didn't know they were holding. That's usually when the real conversation begins.</p>
+<h2>The middle of the hour</h2>
+<p>This part is different for everyone, because it follows you.</p>
+<p>For some people it's practical: we look at the gifts already placed in them, what people already come to them for, what leaves them at peace afterwards (not just excited during), and what one honest next step would look like.</p>
+<p>For some people it's grief. We talk about someone they've lost: who they were, how they laughed, what's been left unsaid. In some sessions I offer medium guidance, a respectful opening to receive messages from loved ones who have passed, when that gift is present. I hold that part with care and humility, and I'm always clear about one thing: I never promise a specific message or outcome. When something comes, I share it gently and you tell me what, if anything, it means to you. When nothing comes, we still sit with what's on your heart.</p>
+<p>For many people it's a bit of both.</p>
+<h2>What it is, and what it isn't</h2>
+<p>It helps to be clear about this from the start.</p>
+<p><strong>A session is:</strong> a real conversation; a pause to discern; spiritual and personal insight; a confidential space, in English or Spanish.</p>
+<p><strong>A session isn't:</strong> a diagnosis or therapy; medical, psychological, legal or financial advice; a performance; a promise of a specific message; a race against the clock.</p>
+<p>If you're working with a doctor, a counselor or a therapist, please keep doing that. This work can sit alongside them. It doesn't replace them.</p>
+<h2>Why the session doesn't end on the hour</h2>
+<p>Sessions are scheduled for one hour. But I always leave buffer time afterwards, on purpose.</p>
+<p>Here's why. The most important thing someone says in a session very often comes in the last few minutes, right when they'd normally be glancing at the clock. I don't want anyone walked out the door in the middle of a breakthrough because of a calendar.</p>
+<p>So I'll say it plainly: <strong>your session ends when you're ready, not when the clock says.</strong></p>
+<h2>What you leave with</h2>
+<p>Not a ten-step plan. Usually one thing to sit with (a question, a word, a feeling worth paying attention to) and one small step you can actually take this week.</p>
+<p>There's no pressure to book another session before you leave. If the hour helped, you'll know. If you'd like to come back, the door is open.</p>
+<h2>A few questions people ask</h2>
+<p><strong>Do I have to be religious?</strong> No. My faith is my personal story. People of every faith, and of none, are welcome. Just arrive open.</p>
+<p><strong>What if I cry?</strong> Then you cry. There's no rush, and that's okay.</p>
+<p><strong>Can I bring someone with me?</strong> Families and loved ones sometimes come together. Mention it when you reach out and we'll talk about what would help most.</p>
+<p><strong>Will I definitely hear from someone who has passed?</strong> No one can promise that, and I won't. What I can promise is a careful, unhurried space to listen.</p>
+<h2>Whenever you're ready</h2>
+<p>If you've been curious but nervous, that's okay. Save this for the day you're ready, or send it to someone who's been wondering what a session is like.</p>
+<p>Blessings and love,
+Danny</p>
+<p><em>This article is for spiritual and personal insight. It is not a substitute for medical, psychological, legal or financial advice.</em></p>
+<hr />
+<p><strong>Site-link suggestions (preview site):</strong> "first session" → <code>first-session.html</code>; "medium guidance" → <code>journal-mediumship.html</code>; "someone they've lost" → <code>journal-grief.html</code>; "gifts already placed in them" → <code>journal-gifts.html</code>; questions → <code>faq.html</code>; "reach out" → <code>book.html</code> (only once booking is live).
+<strong>To confirm:</strong> session length, buffer time and signature line; whether family sessions are offered; in-person vs. virtual (not stated on purpose).</p></div></details>
+<div class="links"><a href="drafts/blog-01-first-session.md" target="_blank">Open markdown</a></div></article><article class="item" data-id="blog-2" data-cat="blog">
+<div class="item-head"><div><span class="tag">Blog 2 · SEO / AEO · ~1,350 words</span><div class="item-title">What to expect from a medium reading</div><div class="meta">Keyword: “what to expect from a medium reading” (free, directional research). Direct answer, H2 structure, FAQ, internal links, meta.</div></div><div class="status-group"></div></div>
+<details class="longform"><summary>Read the full draft</summary><div class="doc"><h1>Blog 2 — What to expect from a medium reading (SEO / AEO draft)</h1>
+<p><strong>Status:</strong> Full draft for review. Not published. Shows the repeatable SEO/AEO format we'd use every week.
+<strong>Pillar:</strong> Grief and connection / what a session is and isn't
+<strong>Primary keyword:</strong> what to expect from a medium reading
+<strong>Secondary keywords:</strong> what happens in a medium reading · first medium reading · how to connect with a loved one who passed · medium reading Miami / South Florida
+<strong>Search intent:</strong> informational, first-timer, often grieving. Wants reassurance and a clear picture before booking anyone.
+<strong>Suggested URL:</strong> <code>/journal/what-to-expect-from-a-medium-reading/</code>
+<strong>Meta title (≤60):</strong> What to Expect From a Medium Reading (First-Timer's Guide)
+<strong>Meta description (≤155):</strong> A calm, honest guide to your first medium reading: what happens, how to prepare, what no medium can promise, and how sessions work with Danny in South Florida.
+<strong>Length:</strong> ~1,350 words</p>
+<h3>Keyword research (directional only, free tools, 23 Nov 2026)</h3>
+<ul>
+<li><strong>Google autocomplete</strong> (via the public suggest endpoint) returns <em>what to expect from a medium reading</em>, <em>what to expect from a psychic medium reading</em>, <em>what to expect from a spiritual reading</em>, <em>what happens in a medium reading</em>, <em>how to connect with a loved one who passed</em>, <em>how to connect with a loved one who has passed away</em>, <em>meditation to connect with a loved one who has passed</em>, <em>medium reading Miami → spiritual reading Miami / medium readings near me</em>, and Spanish <em>medium en Miami</em>.</li>
+<li><strong>No autocomplete</strong> came back for <em>spiritual medium Miami</em>, <em>spiritual medium South Florida</em> or <em>bilingual spiritual guidance</em>. That suggests low or no query volume as phrased, so they work better as on-page modifiers than as the headline keyword.</li>
+<li><strong>People Also Ask / top-result themes</strong> (web search): what happens step by step; how long it lasts; how to prepare; what questions to ask; what if the person you hope for doesn't come through; don't volunteer too much; it can't guarantee contact; it's not a replacement for medical or mental-health care.</li>
+<li><strong>No search volumes are claimed.</strong> We didn't use a paid tool. Treat the choice as directional and check it in Search Console once the site is live.</li>
+<li><strong>Why this keyword:</strong> clear first-timer intent, strong match with Danny's careful approach, it's the question AI answers get asked word for word, and it lets us lead with honesty (no guarantees), which most competing pages bury.</li>
+</ul>
+<hr />
+<h2>What to expect from a medium reading</h2>
+<p><strong>Direct answer:</strong> A medium reading is a calm, one-on-one conversation in which the medium shares impressions they sense from loved ones who have passed (names, memories, personality traits or feelings), and you say whether they mean anything to you. A first reading usually lasts about an hour. No honest medium can promise that a specific person will come through. A good reading feels unhurried, respects your boundaries, and leaves you with comfort or clarity, not pressure.</p>
+<p>That's the short version. Below is what it actually looks like when you sit with me, Danny Cabrera, at Un Momentico in South Florida, and how to prepare so the hour serves you.</p>
+<h2>What happens during a medium reading, step by step</h2>
+<p>Every medium works a little differently. Here's how a session with me usually unfolds.</p>
+<ol>
+<li><strong>We slow down.</strong> We start with a few quiet minutes. You don't need to explain your whole story, and I'd actually rather you didn't, at first.</li>
+<li><strong>I share what comes.</strong> Impressions can arrive as a name or initial, a memory, a personality trait, a feeling, or an image. I share them carefully and as they are, without dressing them up.</li>
+<li><strong>You respond honestly.</strong> A simple "yes," "no" or "I'm not sure" is perfect. You never have to make something fit.</li>
+<li><strong>We talk about what it means for you now.</strong> Often the most important part isn't the message itself. It's how you carry the love forward and how you live now.</li>
+<li><strong>We close without rushing.</strong> Sessions are scheduled for one hour, with buffer time afterwards. Your session ends when you're ready, not when the clock says.</li>
+</ol>
+<h2>How long does a medium reading last?</h2>
+<p>Most first readings run 30 to 60 minutes, depending on the medium. Mine are scheduled for one hour, and I always leave extra time so nothing important gets cut off at the end.</p>
+<h2>How to prepare for your first medium reading</h2>
+<ul>
+<li><strong>Come with an open heart, not a script.</strong> You don't need a list of tests.</li>
+<li><strong>Hold one or two open questions.</strong> For example: <em>"Is there anything someone wants me to know?"</em> or <em>"What do I need to hear right now?"</em> Open questions work better than yes/no ones.</li>
+<li><strong>Don't over-share at the start.</strong> Letting impressions come first makes them easier to weigh honestly.</li>
+<li><strong>Decide your boundaries.</strong> You can say at any point that you'd rather not talk about something, or that you need a pause.</li>
+<li><strong>Bring tissues, and patience with yourself.</strong> Readings can be emotional, in both directions.</li>
+</ul>
+<h2>What a medium can't promise you</h2>
+<p>This is the part many guides skip, and it matters most.</p>
+<ul>
+<li><strong>No one can guarantee that a specific person will come through.</strong> If someone promises that, be careful.</li>
+<li><strong>A reading isn't proof, and it isn't a prediction.</strong> It's an experience of connection that you weigh for yourself.</li>
+<li><strong>It isn't a replacement for care.</strong> A reading offers spiritual and personal insight. It isn't a substitute for medical, psychological, legal or financial advice, and it shouldn't replace your doctor, counselor or grief support.</li>
+</ul>
+<p>At Un Momentico, I say this out loud before we start: I never promise a specific message or outcome. When something comes, I share it with humility. When nothing comes, we still sit with what's on your heart.</p>
+<h2>Do you have to believe in mediums, or share a faith?</h2>
+<p>No. I'm a man of faith, and I'm open about the spirit, energy and faith that guide me. But that's my story, not a requirement for yours. People of every faith, and of none, come to sit with me. The only thing that really helps is arriving open.</p>
+<h2>What if the person you hoped for doesn't come through?</h2>
+<p>It happens, and it doesn't mean you did anything wrong or that they're "not there." Sometimes someone else comes forward. Sometimes the hour becomes about the grief itself: talking about the person, what was left unsaid, and how to keep loving them while you keep living. People often tell me that part was what they needed most.</p>
+<h2>How to connect with a loved one who passed, outside of a reading</h2>
+<p>You don't need a medium to keep a relationship with someone you've lost. A few gentle practices:</p>
+<ul>
+<li><strong>Talk to them.</strong> Out loud, in a journal, at their favorite place.</li>
+<li><strong>Keep one ritual.</strong> Their coffee order on their birthday, their song on Sunday mornings.</li>
+<li><strong>Notice without forcing.</strong> Many people notice small signs: a song, a scent, a dream. Let them be comfort, not a test.</li>
+<li><strong>Take un momentico.</strong> Phone face down, three slow breaths, and ask: <em>What would they want for me today?</em></li>
+</ul>
+<h2>Medium readings in South Florida, in English or Spanish</h2>
+<p>I hold sessions for individuals and families across South Florida, in English or Spanish, or the mix many of our families speak at home. <em>Aquí no hay apuro.</em> There's no rush here.</p>
+<h2>Frequently asked questions</h2>
+<p><strong>What should I ask a medium on my first reading?</strong>
+Keep it open: "Is anyone trying to connect with me?" or "What do I most need to hear right now?" Open questions leave room for what matters.</p>
+<p><strong>Should I tell the medium who I want to hear from?</strong>
+It's usually best not to at the start. Let impressions come first, then share as much as you're comfortable with.</p>
+<p><strong>Is a medium reading the same as a psychic reading?</strong>
+Not exactly. Mediumship focuses on connection with loved ones who have passed. Psychic readings usually focus on the person in front of the reader. My sessions also include spiritual guidance and life-purpose coaching.</p>
+<p><strong>Can a medium reading help with grief?</strong>
+Many people find comfort and a sense of connection. It can sit alongside grief counseling and support, but it isn't a substitute for them.</p>
+<p><strong>Are medium readings available in Spanish?</strong>
+Yes. Sessions with Danny are available in English or Spanish.</p>
+<p><strong>How long after a death should I wait?</strong>
+There's no rule. Some people come within weeks, others after years. If your grief feels very raw or overwhelming, please lean on a grief counselor or doctor as well.</p>
+<hr />
+<p>Blessings and love,
+Danny</p>
+<p><em>This article is for spiritual and personal insight. It is not a substitute for medical, psychological, legal or financial advice.</em></p>
+<hr />
+<h3>SEO / AEO checklist (repeatable format)</h3>
+<ul>
+<li>[x] Primary keyword in H1, URL, meta title, first 100 words</li>
+<li>[x] Direct-answer paragraph (40–60 words) under H1 for AI answers / featured snippet</li>
+<li>[x] H2s phrased as real questions from autocomplete / PAA</li>
+<li>[x] FAQ block (6 Q&amp;As), ready for <code>FAQPage</code> schema when the site is live</li>
+<li>[x] Local + language modifier (South Florida, English or Spanish) without keyword stuffing</li>
+<li>[x] Honest limits and disclaimer (E-E-A-T / trust)</li>
+<li>[ ] Add <code>Article</code> + <code>FAQPage</code> JSON-LD and author bio at publish</li>
+<li>[ ] Check impressions in Search Console 4–6 weeks after publishing</li>
+</ul>
+<h3>Site-link suggestions (preview site)</h3>
+<ul>
+<li>"first session" → <code>first-session.html</code> (Your first session)</li>
+<li>"what mediumship is" / step-by-step section → <code>journal-mediumship.html</code> (What mediumship is, and what it isn't)</li>
+<li>"grief" / "how to connect with a loved one" → Blog 2 once it is on the journal (this article). Do not link to the retired journal titles.</li>
+<li>FAQ → <code>faq.html</code>; "sessions" → <code>sessions.html</code>; Blog 1 → <code>/journal/what-a-first-session-feels-like/</code></li>
+<li>Once booking is live, "sit with me" → <code>book.html</code></li>
+</ul>
+<p><strong>To confirm:</strong> mediumship wording (to confirm with Danny); family sessions; in-person vs. virtual (not stated); whether to name his faith tradition.</p></div></details>
+<div class="links"><a href="drafts/blog-02-medium-reading-seo.md" target="_blank">Open markdown</a></div></article><article class="item" data-id="outreach-1" data-cat="outreach">
+<div class="item-head"><div><span class="tag">Outreach sample · podcast</span><span class="tag">Unsent draft — do not send until a named person signs off</span><div class="item-title">Podcast guest pitch</div><div class="meta">A short first note for a host or booking producer. Placeholders for the show and host name. Bilingual-friendly. No invented credentials.</div></div><div class="status-group"></div></div>
+<details class="longform"><summary>Read the full draft</summary><div class="doc"><h1>Podcast guest pitch (draft — do not send)</h1>
+<p><strong>Status:</strong> Unsent draft. Do not email or DM this until Danny has signed off by name (and Brandon, if it goes out under Gil Marketing).
+<strong>For:</strong> A host or booking producer at [Podcast Name].
+<strong>Length:</strong> A short first note, plus a tighter follow-up line if needed.</p>
+<hr />
+<p><strong>Subject:</strong> A guest idea for [Podcast Name] — purpose, pause, and grief</p>
+<p>Hi [Host Name],</p>
+<p>My name is Danny Cabrera. I sit with people in spiritual and life-purpose conversations under the name Un Momentico — “a little moment.” I’m writing because I think I could be a calm, useful guest for [Podcast Name].</p>
+<p>The work is open to people of every faith, and of none. I also offer mediumship, held carefully, with no promises about what will come through. In a Cuban home, when someone says <em>un momentico</em>, you stop and you look at the person in front of you. That’s the tone I would bring to your show.</p>
+<p>A few threads we could follow:</p>
+<ul>
+<li>What a first session actually feels like (no script, no rush)</li>
+<li>What years of listening in hard moments taught me about letting someone finish</li>
+<li>Grief that doesn’t follow a timeline</li>
+<li>A 60-second pause you can take in English or Spanish</li>
+</ul>
+<p>I’m glad to record in English, and to mix in Spanish if that serves your listeners.</p>
+<p>If this feels like a fit, I’d love to talk. If the timing isn’t right, I wish you good work and good rest.</p>
+<p>Blessings and love,
+Danny Cabrera
+Un Momentico
+[email / phone — to confirm]
+@realDancab</p>
+<hr />
+<p><strong>Optional one-line follow-up (if no reply):</strong></p>
+<p>Hi [Host Name] — just floating this again in case it’s useful. Happy to skip it if the calendar is full. Blessings and love, Danny.</p>
+<p><strong>To confirm before any send:</strong> the public-safety story (only if Danny is comfortable telling it on a podcast); whether to mention mediumship in the first note; the email and phone to use; and the specific episode angle for that show.</p></div></details>
+<div class="links"><a href="drafts/outreach-01-podcast-pitch.md" target="_blank">Open markdown</a></div></article><article class="item" data-id="outreach-2" data-cat="outreach">
+<div class="item-head"><div><span class="tag">Outreach sample · employee wellness</span><span class="tag">Unsent draft — do not send until a named person signs off</span><div class="item-title">Corporate employee-wellness intro</div><div class="meta">Spiritual and life-purpose support for a team, not clinical mental health care, and not a substitute for an EAP, a counselor, or a doctor. Kept separate from any clinic work.</div></div><div class="status-group"></div></div>
+<details class="longform"><summary>Read the full draft</summary><div class="doc"><h1>Corporate employee-wellness intro (draft — do not send)</h1>
+<p><strong>Status:</strong> Unsent draft. Do not email or DM this until Danny has signed off by name (and Brandon, if it goes out under Gil Marketing).
+<strong>For:</strong> An HR, people, or wellness lead at [Company].
+<strong>What this is:</strong> A first introduction to spiritual and life-purpose support for employees who want it.
+<strong>What this is not:</strong> Clinical mental health care, therapy, diagnosis, or a replacement for an EAP, a counselor, or a doctor. Keep this separate from any clinic or medical-practice work.</p>
+<hr />
+<p><strong>Subject:</strong> A quiet wellness offering for the [Company] team</p>
+<p>Hi [Name],</p>
+<p>I’m Danny Cabrera, a life purpose coach working under the name Un Momentico — “a little moment.” I’m writing to introduce a possible wellness partnership for the people at [Company].</p>
+<p>This would not be clinical mental health care, and it would not take the place of a therapist, a doctor, or your existing employee assistance program. What I offer is spiritual and life-purpose support: a quiet, one-hour conversation where someone can pause, talk honestly, and discern what they need next. People of every faith are welcome, and so are people of none. Sessions can be in English or Spanish.</p>
+<p>Some teams use this as an optional resource for staff who are carrying grief, feeling stuck, or simply needing a moment to hear themselves think. There is no pressure to believe what I believe, and I don’t promise a particular outcome.</p>
+<p>If it would be helpful, I can share a short one-pager or walk you through what a first session feels like. If this isn’t the right fit for [Company], I understand — thank you for reading.</p>
+<p>Blessings and love,
+Danny Cabrera
+Un Momentico
+[email / phone — to confirm]
+@realDancab</p>
+<hr />
+<p><strong>To confirm before any send:</strong> who at [Company] should receive this; whether Danny wants to offer a lunch-and-learn, optional one-to-one sessions, or only a conversation first; and the email and phone to use. Leave any talk of cost out of this note. Keep any later scope conversation off this page until Danny signs off.</p></div></details>
+<div class="links"><a href="drafts/outreach-02-corporate-wellness.md" target="_blank">Open markdown</a></div></article><article class="item" data-id="outreach-3" data-cat="outreach">
+<div class="item-head"><div><span class="tag">Outreach sample · community partner</span><span class="tag">Unsent draft — do not send until a named person signs off</span><div class="item-title">Community partner intro</div><div class="meta">A warm hello to a church, spiritual center, or wellness studio. The door is left open; no hard ask.</div></div><div class="status-group"></div></div>
+<details class="longform"><summary>Read the full draft</summary><div class="doc"><h1>Community partner intro (draft — do not send)</h1>
+<p><strong>Status:</strong> Unsent draft. Do not email or DM this until Danny has signed off by name (and Brandon, if it goes out under Gil Marketing).
+<strong>For:</strong> A pastor, coordinator, or owner at [Church / Spiritual Center / Wellness Studio].
+<strong>Aim:</strong> A warm first introduction, not a hard ask. The door is left open for a conversation, a shared evening, or simply knowing one another.</p>
+<hr />
+<p><strong>Subject:</strong> A hello from Un Momentico — [Church / Spiritual Center / Wellness Studio]</p>
+<p>Hi [Name],</p>
+<p>My name is Danny Cabrera. I offer spiritual and life-purpose sessions under the name Un Momentico, which in a Cuban home means “a little moment” — the kind where you stop, sit down, and be here.</p>
+<p>I’m writing because I have a lot of respect for the space you hold at [Church / Spiritual Center / Wellness Studio], and I wanted to introduce myself. My work is for people of every faith, and of none. My own faith is part of my story, not a requirement I place on anyone who sits with me. I also offer mediumship, with care and without promises. Conversations can be in English or Spanish.</p>
+<p>I would love to learn more about what you’re building, and to see whether there is a natural way to walk alongside each other — a conversation, a quiet evening for your community, or simply knowing there’s a place to send someone who needs a pause. No pressure at all if the timing isn’t right.</p>
+<p>If a coffee or a short call would be welcome, I’m easy to find. If not, I wish your community peace and good work.</p>
+<p>Blessings and love,
+Danny Cabrera
+Un Momentico
+[email / phone — to confirm]
+@realDancab</p>
+<hr />
+<p><strong>To confirm before any send:</strong> the specific house of worship, center, or studio; whether to mention mediumship in a first note to that community; whether Danny is comfortable visiting in person; and the email and phone to use.</p></div></details>
+<div class="links"><a href="drafts/outreach-03-community-partner.md" target="_blank">Open markdown</a></div></article><article class="item" data-id="longform-1" data-cat="longform">
+<div class="item-head"><div><span class="tag">Long-form · sample episode package</span><span class="tag">Draft — do not publish until a named person signs off</span><div class="item-title">Take Un Momentico (working title)</div><div class="meta">Monthly long-form sitting (he has agreed). Name and format still to confirm. Includes concept, title options, a 45–60 minute run-of-show, guest-type ideas, a recording-setup guide, and a clip map of 8 planned shorts.</div></div><div class="status-group"></div></div>
+<details class="longform"><summary>Read the full draft</summary><div class="doc"><h1>L1 — Sample episode package: Take Un Momentico (draft)</h1>
+<p><strong>Status:</strong> Draft only. Do not publish, schedule, or send anything from this package until Danny has signed off by name.
+<strong>Working title:</strong> <em>Take Un Momentico</em> (for Spanish: <em>Tómate Un Momentico</em>; name to confirm).
+<strong>Cadence:</strong> One sitting a month to start; twice a month later, once it is running smoothly.
+<strong>Length:</strong> 45–60 minutes, then clipped into Shorts, Reels, and TikTok.
+<strong>Note:</strong> Danny has agreed to a monthly long-form sitting. The format (guest conversation, solo teaching, or a Q&amp;A) and the public name are still to confirm. This sample is written as a calm guest conversation, because that form also works as a solo teaching if no guest is ready.</p>
+<hr />
+<h2>Episode concept (sample)</h2>
+<p><strong>Episode 1 — What a first session actually feels like</strong></p>
+<p>A seated, unhurried conversation about the hour someone finally stops and sits down. Danny welcomes people of every faith, and of none. He talks through what a first session is, and what it isn’t: a real conversation, a pause to discern, spiritual and personal insight — not a performance, not a diagnosis, and not a promise that a specific message will come through.</p>
+<p>If a guest is present, they speak from their own life (grief, calling, or a first experience of being truly heard). If it is a solo sitting, Danny teaches from the same outline and leaves space for a few listener questions gathered in advance.</p>
+<p>The tone is the same as a session: no rush, no script to perform. Sign-off: <em>Blessings and love.</em></p>
+<hr />
+<h2>Title options (pick with Danny)</h2>
+<ol>
+<li>What a first session actually feels like</li>
+<li>Un momentico: the hour you finally sit down</li>
+<li>Heard before helped</li>
+<li>Come as you are</li>
+<li>Your session ends when you’re ready</li>
+</ol>
+<hr />
+<h2>Run-of-show (45–60 minutes)</h2>
+<table>
+<thead>
+<tr>
+<th>Time</th>
+<th>Segment</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0:00–2:00</td>
+<td>Open and welcome</td>
+<td>Who this sitting is for. All faiths, and none. Today is a conversation, not a performance.</td>
+</tr>
+<tr>
+<td>2:00–8:00</td>
+<td>What <em>un momentico</em> means</td>
+<td>The Cuban-home pause: sit down, look at me, be here. English first; a Spanish line if he is comfortable.</td>
+</tr>
+<tr>
+<td>8:00–18:00</td>
+<td>What a first session is, and isn’t</td>
+<td>No script. No rush. Scheduled for one hour, with buffer. “Your session ends when you’re ready, not when the clock says.”</td>
+</tr>
+<tr>
+<td>18:00–30:00</td>
+<td>Listening in hard moments</td>
+<td>His path, in the terms he has confirmed: years of listening, then this work. No invented stories. Guest (if any) reflects on a time they needed to be heard.</td>
+</tr>
+<tr>
+<td>30:00–42:00</td>
+<td>Grief, and loved ones</td>
+<td>Gentle, no timeline, no guarantees. Mediumship is held with care, only in wording he has signed off.</td>
+</tr>
+<tr>
+<td>42:00–52:00</td>
+<td>One honest next step</td>
+<td>Not ten. A discernment question to sit with this week. If it is a Q&amp;A format, this block is listener questions instead.</td>
+</tr>
+<tr>
+<td>52:00–58:00</td>
+<td>Close</td>
+<td>How to stay close (follow, newsletter once it exists, booking once it is live). <em>Blessings and love.</em></td>
+</tr>
+<tr>
+<td>58:00–60:00</td>
+<td>Hold / credits</td>
+<td>Quiet end card. Disclaimer on screen: for spiritual and personal insight; not a substitute for medical, psychological, legal, or financial advice.</td>
+</tr>
+</tbody>
+</table>
+<p>Times are a guide, not a script. If a story needs more room, let it have it.</p>
+<hr />
+<h2>Guest-type ideas (no real names)</h2>
+<p>These are types, not people to contact yet. Any real guest needs a named sign-off before outreach.</p>
+<ol>
+<li><strong>A faith or community guide</strong> — someone who already holds space for people in transition, and is comfortable sitting with a spiritual conversation that welcomes every faith, and none.</li>
+<li><strong>Someone who has walked through grief and is ready to talk about living with it</strong> — not a current client, unless that person has given written permission to be invited.</li>
+<li><strong>A wellness practitioner whose work sits beside his</strong> — life-purpose, contemplative, or pastoral care. Not clinical mental health care, and not a medical practice.</li>
+</ol>
+<hr />
+<h2>Recording-setup guide (for Danny)</h2>
+<p>Keep it simple. This should feel like a session, not a production.</p>
+<ul>
+<li>A quiet room with warm, even light — a window to the side is enough. Sit; don’t stand.</li>
+<li>Two chairs at a slight angle, so it is a conversation, not an interview desk. For a solo sitting, one chair, camera at eye level.</li>
+<li>One stable camera (a phone on a tripod is fine) plus a second phone for a backup close-up, if someone can start it and leave it.</li>
+<li>A small lavalier or a decent USB microphone, if he has one. If not, a phone close to the speaker is better than a camera mic across the room.</li>
+<li>On-screen: a short title card, his name, and the working show name. Captions in the edit.</li>
+<li>Before recording: phones on silent, a glass of water, a printed run-of-show with the few lines he wants to hit, not a script to read.</li>
+<li>After recording: we handle the edit, the clip map, and the draft package. Nothing goes live until he has signed off.</li>
+</ul>
+<p>Comfort on camera is still to confirm. The first sitting can be shorter if that helps him settle.</p>
+<hr />
+<h2>Clip map (planned Shorts, Reels, and TikTok)</h2>
+<p>Timestamps are placeholders to fill in from the finished edit. Each clip is 20–45 seconds, with a hook in the first two seconds, a burned-in caption, and the sign-off <em>Blessings and love.</em></p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Working hook</th>
+<th>Timestamp</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>“In a Cuban home, <em>un momentico</em> never meant just a second.”</td>
+<td>[mm:ss]–[mm:ss]</td>
+<td>Definition clip. English; Spanish line if he recorded one.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>“You don’t have to prepare anything.”</td>
+<td>[mm:ss]–[mm:ss]</td>
+<td>First-session comfort.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>“Your session ends when you’re ready, not when the clock says.”</td>
+<td>[mm:ss]–[mm:ss]</td>
+<td>Signature line.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>“People need to be heard before they can be helped.”</td>
+<td>[mm:ss]–[mm:ss]</td>
+<td>Listening / service-to-calling, only with confirmed facts.</td>
+</tr>
+<tr>
+<td>5</td>
+<td>“The hardest part of losing someone? Monday still comes.”</td>
+<td>[mm:ss]–[mm:ss]</td>
+<td>Grief. Gentle. No guarantees.</td>
+</tr>
+<tr>
+<td>6</td>
+<td>“Mediumship isn’t what the movies show.”</td>
+<td>[mm:ss]–[mm:ss]</td>
+<td>Only if he has signed off the public wording.</td>
+</tr>
+<tr>
+<td>7</td>
+<td>“Come as you are. Tired, hopeful, sceptical. All of it is welcome.”</td>
+<td>[mm:ss]–[mm:ss]</td>
+<td>Open-door clip.</td>
+</tr>
+<tr>
+<td>8</td>
+<td>“One honest next step. Not ten.”</td>
+<td>[mm:ss]–[mm:ss]</td>
+<td>Close / CTA toward follow or a first session.</td>
+</tr>
+</tbody>
+</table>
+<p>Clips also seed a carousel, a newsletter section, and a journal article, once those are live.</p>
+<hr />
+<p><strong>To confirm before any recording:</strong> the public name of the show; guest vs. solo vs. Q&amp;A for episode 1; comfort on camera; mediumship and “loved ones” wording; how much Spanish; background facts used in the listening segment; and whether a guest will be invited (no outreach until he signs off).</p></div></details>
+<div class="links"><a href="drafts/longform-01-conversations.md" target="_blank">Open markdown</a></div></article></div>
+<p class="meta" style="margin-top:28px">Carousels are rendered locally with Gil's free HTML-to-PNG carousel engine in Danny's site fonts and colours. Every deck includes a motion preview. Outreach samples are drafts only. Nothing here is connected to any account, and nothing is sent or posted from this page.</p></div>
+<script>
+(function(){
+  var KEY='danny-content-review-v2', saved={};
+  try{saved=JSON.parse(localStorage.getItem(KEY)||'{}');}catch(e){saved={};}
+  function persist(){try{localStorage.setItem(KEY,JSON.stringify(saved));}catch(e){}}
+  var items=[].slice.call(document.querySelectorAll('.item'));
+  items.forEach(function(el){var id=el.dataset.id; if(!saved[id]) saved[id]={status:el.dataset.default||'',note:''};});
+  function updateCounts(){var a=0,e=0,p=0;items.forEach(function(el){var s=(saved[el.dataset.id]||{}).status;if(s==='approve')a++;else if(s==='edit')e++;else if(!s)p++;});
+    document.getElementById('cnt-total').textContent=items.length;document.getElementById('cnt-approve').textContent=a;document.getElementById('cnt-edit').textContent=e;document.getElementById('cnt-pending').textContent=p;}
+  items.forEach(function(el){var id=el.dataset.id,grp=el.querySelector('.status-group');
+    [['approve','Approve'],['edit','Needs edit'],['skip','Skip']].forEach(function(pair){var b=document.createElement('button');b.type='button';b.className='st-btn';b.textContent=pair[1];
+      if(saved[id].status===pair[0])b.classList.add('sel-'+pair[0]);
+      b.addEventListener('click',function(){saved[id].status=saved[id].status===pair[0]?'':pair[0];grp.querySelectorAll('.st-btn').forEach(function(x){x.className='st-btn';});if(saved[id].status)b.classList.add('sel-'+pair[0]);persist();updateCounts();});grp.appendChild(b);});
+    var input=document.createElement('textarea');input.className='note-box';input.rows=2;input.placeholder='Notes for this piece (saved in this browser)';input.value=saved[id].note||'';
+    input.addEventListener('input',function(){saved[id].note=input.value;persist();});el.appendChild(input);});
+  document.querySelectorAll('.tab').forEach(function(tab){tab.addEventListener('click',function(){document.querySelectorAll('.tab').forEach(function(t){t.classList.remove('active');});tab.classList.add('active');
+    var c=tab.dataset.cat;items.forEach(function(el){el.style.display=(c==='all'||el.dataset.cat===c)?'':'none';});});});
+  document.querySelectorAll('.gallery').forEach(function(g){var tr=g.querySelector('.track'),cnt=g.querySelector('.count'),n=tr.children.length;
+    function idx(){return Math.round(tr.scrollLeft/(tr.clientWidth+10));}
+    tr.addEventListener('scroll',function(){cnt.textContent=(idx()+1)+' / '+n;});
+    g.querySelectorAll('button').forEach(function(b){b.addEventListener('click',function(){var i=Math.max(0,Math.min(n-1,idx()+parseInt(b.dataset.dir,10)));tr.scrollTo({left:i*(tr.clientWidth+10),behavior:'smooth'});});});});
+  document.getElementById('export-btn').addEventListener('click',function(){var blob=new Blob([JSON.stringify({exported:new Date().toISOString(),items:saved},null,2)],{type:'application/json'});
+    var a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='danny-content-review-v2.json';a.click();});
+  persist();updateCounts();
+})();
+</script></body></html>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Preview sitemap. Replace DOMAIN-TO-CONFIRM with the live domain at launch. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://DOMAIN-TO-CONFIRM/</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://DOMAIN-TO-CONFIRM/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://DOMAIN-TO-CONFIRM/?lang=es"/>
+  </url>
+  <url>
+    <loc>https://DOMAIN-TO-CONFIRM/about.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://DOMAIN-TO-CONFIRM/about.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://DOMAIN-TO-CONFIRM/about.html?lang=es"/>
+  </url>
+  <url>
+    <loc>https://DOMAIN-TO-CONFIRM/sessions.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://DOMAIN-TO-CONFIRM/sessions.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://DOMAIN-TO-CONFIRM/sessions.html?lang=es"/>
+  </url>
+  <url>
+    <loc>https://DOMAIN-TO-CONFIRM/first-session.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://DOMAIN-TO-CONFIRM/first-session.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://DOMAIN-TO-CONFIRM/first-session.html?lang=es"/>
+  </url>
+  <url>
+    <loc>https://DOMAIN-TO-CONFIRM/faq.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://DOMAIN-TO-CONFIRM/faq.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://DOMAIN-TO-CONFIRM/faq.html?lang=es"/>
+  </url>
+  <url>
+    <loc>https://DOMAIN-TO-CONFIRM/book.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://DOMAIN-TO-CONFIRM/book.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://DOMAIN-TO-CONFIRM/book.html?lang=es"/>
+  </url>
+  <url>
+    <loc>https://DOMAIN-TO-CONFIRM/privacy.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://DOMAIN-TO-CONFIRM/privacy.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://DOMAIN-TO-CONFIRM/privacy.html?lang=es"/>
+  </url>
+  <url>
+    <loc>https://DOMAIN-TO-CONFIRM/spiritual-guidance.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://DOMAIN-TO-CONFIRM/spiritual-guidance.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://DOMAIN-TO-CONFIRM/spiritual-guidance.html?lang=es"/>
+  </url>
+  <url>
+    <loc>https://DOMAIN-TO-CONFIRM/mediumship.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://DOMAIN-TO-CONFIRM/mediumship.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://DOMAIN-TO-CONFIRM/mediumship.html?lang=es"/>
+  </url>
+  <url>
+    <loc>https://DOMAIN-TO-CONFIRM/life-purpose-coaching.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://DOMAIN-TO-CONFIRM/life-purpose-coaching.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://DOMAIN-TO-CONFIRM/life-purpose-coaching.html?lang=es"/>
+  </url>
+  <url>
+    <loc>https://DOMAIN-TO-CONFIRM/family-sessions.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://DOMAIN-TO-CONFIRM/family-sessions.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://DOMAIN-TO-CONFIRM/family-sessions.html?lang=es"/>
+  </url>
+  <url>
+    <loc>https://DOMAIN-TO-CONFIRM/journal.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://DOMAIN-TO-CONFIRM/journal.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://DOMAIN-TO-CONFIRM/journal.html?lang=es"/>
+  </url>
+  <url>
+    <loc>https://DOMAIN-TO-CONFIRM/what-a-first-session-feels-like.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://DOMAIN-TO-CONFIRM/what-a-first-session-feels-like.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://DOMAIN-TO-CONFIRM/what-a-first-session-feels-like.html?lang=es"/>
+  </url>
+  <url>
+    <loc>https://DOMAIN-TO-CONFIRM/what-to-expect-from-a-medium-reading.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://DOMAIN-TO-CONFIRM/what-to-expect-from-a-medium-reading.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://DOMAIN-TO-CONFIRM/what-to-expect-from-a-medium-reading.html?lang=es"/>
+  </url>
+  <url>
+    <loc>https://DOMAIN-TO-CONFIRM/journal-mediumship.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://DOMAIN-TO-CONFIRM/journal-mediumship.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://DOMAIN-TO-CONFIRM/journal-mediumship.html?lang=es"/>
+  </url>
+</urlset>

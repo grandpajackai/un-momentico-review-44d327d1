@@ -1,0 +1,9 @@
+# PRIVATE PREVIEW: keep everything out of search engines.
+# Every page also carries <meta name="robots" content="noindex, nofollow, noarchive">.
+# At launch (only after Danny approves): replace this file with
+#   User-agent: *
+#   Allow: /
+#   Sitemap: https://DOMAIN-TO-CONFIRM/sitemap.xml
+# and remove the noindex meta tag from the page template.
+User-agent: *
+Disallow: /

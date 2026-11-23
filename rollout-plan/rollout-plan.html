@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Un Momentico Coaching Group — 30/60/90 Rollout Plan</title>
+  <style>
+    :root {
+      --bg: #faf7f2; --surface: #ffffff; --ink: #1c1917; --muted: #57534e;
+      --line: #d6cfc2; --accent: #2f4f46; --gold: #b8864b;
+      --font: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--ink); font: 13.5px/1.45 var(--font); }
+    .topbar {
+      background: #1c1917; color: #faf7f2; padding: 9px 20px;
+      display: flex; justify-content: space-between; align-items: center; gap: 10px; flex-wrap: wrap;
+    }
+    .topbar a { color: #e7cfa8; text-decoration: none; font-weight: 600; font-size: 13px; }
+    .sheet {
+      max-width: 1050px; margin: 22px auto 40px; background: var(--surface);
+      border: 1px solid var(--line); border-radius: 14px; padding: 26px 28px;
+      box-shadow: 0 8px 26px rgba(28,25,23,0.05);
+    }
+    .sheet-head {
+      display: flex; justify-content: space-between; align-items: flex-start; gap: 16px;
+      border-bottom: 2px solid var(--ink); padding-bottom: 14px; margin-bottom: 14px; flex-wrap: wrap;
+    }
+    .eyebrow { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--gold); }
+    h1 { margin: 2px 0 4px; font-size: 24px; font-family: Georgia, serif; }
+    h2 { font-size: 13px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--accent); margin: 15px 0 8px; }
+    p { margin: 0 0 8px; }
+    .print-btn {
+      border: 1px solid var(--line); background: #fff; padding: 7px 12px; border-radius: 8px;
+      font: inherit; font-weight: 600; cursor: pointer;
+    }
+    .grid { display: grid; gap: 10px; }
+    .g4 { grid-template-columns: repeat(4, 1fr); }
+    .g5 { grid-template-columns: repeat(5, 1fr); }
+    .g3 { grid-template-columns: repeat(3, 1fr); }
+    .box { border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; background: #faf7f2; }
+    .box strong { display: block; font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--accent); margin-bottom: 3px; }
+    .flag {
+      display: inline-block; margin-left: 4px; padding: 0 5px; border-radius: 4px;
+      background: #f4efe6; color: #875c27; font-size: 9px; font-weight: 700;
+      letter-spacing: 0.04em; text-transform: uppercase; vertical-align: 1px;
+    }
+    .note { font-size: 12.5px; color: var(--muted); margin: 0 0 8px; }
+    .series { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 4px; }
+    .chip {
+      border: 1px solid var(--line); border-radius: 999px; padding: 4px 10px;
+      background: #faf7f2; font-size: 12px;
+    }
+    .chip em { font-style: normal; color: #875c27; font-weight: 700; font-size: 10px; letter-spacing: 0.03em; text-transform: uppercase; margin-left: 4px; }
+    .roadmap { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+    .phase { border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; }
+    .phase h3 { margin: 0 0 6px; font-size: 15px; font-family: Georgia, serif; }
+    .phase ul, .outreach ul { margin: 0; padding-left: 17px; display: grid; gap: 5px; }
+    .outreach {
+      margin-top: 12px; border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px;
+      background: #faf7f2;
+    }
+    .outreach h3 { margin: 0 0 6px; font-size: 15px; font-family: Georgia, serif; }
+    .outreach-grid { display: grid; grid-template-columns: 1.15fr 1fr 1fr; gap: 12px; }
+    .outreach-grid h4 { margin: 0 0 4px; font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--accent); }
+    table { width: 100%; border-collapse: collapse; margin-top: 6px; font-size: 12.5px; }
+    th, td { border: 1px solid var(--line); padding: 6px 8px; text-align: left; vertical-align: top; }
+    th { background: #f4efe6; font-weight: 700; font-size: 11.4px; }
+    .foot { margin-top: 14px; font-size: 12px; color: var(--muted); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+    @media screen and (max-width: 960px) {
+      .g4, .g5, .g3, .roadmap, .outreach-grid { grid-template-columns: 1fr; }
+    }
+    .sched-block { }
+    @media print {
+      @page { size: letter; margin: 0.3in; }
+      body { background: #fff; font-size: 8.7px; line-height: 1.2; }
+      .topbar, .print-btn { display: none !important; }
+      .sheet { margin: 0; border: 0; border-radius: 0; padding: 0; box-shadow: none; max-width: none; }
+      .sheet-head { padding-bottom: 5px; margin-bottom: 5px; }
+      h1 { font-size: 15.5px; margin: 1px 0 2px; }
+      h2 { margin: 6px 0 3px; font-size: 9.5px; }
+      h2[style] { margin-top: 6px !important; }
+      p { margin: 0 0 3px; }
+      .box, .phase, .outreach { padding: 4px 6px; border-radius: 6px; }
+      .phase h3, .outreach h3 { font-size: 11px; margin-bottom: 3px; }
+      .grid, .roadmap { gap: 4px; }
+      .outreach { margin-top: 5px; }
+      .outreach-grid { gap: 6px; }
+      .phase ul, .outreach ul { gap: 2px; }
+      table { font-size: 7.55px; }
+      th, td { padding: 2px 3px; }
+      .foot { margin-top: 5px; font-size: 7.5px; }
+      .chip { padding: 1px 5px; font-size: 8.2px; }
+      .note { font-size: 8.2px; margin: 0 0 3px; }
+      .series { gap: 3px; }
+      .phase, .outreach, .sched-block { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <span><strong>Un Momentico Coaching Group</strong> &middot; One-Page Rollout Plan (Danny Cabrera)</span>
+    <a href="../client-portal/index.html">&larr; Back to Client Portal</a>
+  </div>
+
+  <main class="sheet">
+    <div class="sheet-head">
+      <div>
+        <div class="eyebrow">Gil Marketing &middot; Solution Driven (Listen &rarr; Research &rarr; Strategize &rarr; Execute &rarr; Evaluate &rarr; Growth)</div>
+        <h1>30 / 60 / 90-Day Rollout Plan &mdash; Danny Cabrera</h1>
+        <p style="color:var(--muted)">Built from a real baseline, not a guess. KPI <em>targets</em> stay blank until you set them together in the meeting.</p>
+      </div>
+      <button class="print-btn" type="button" onclick="window.print()">Print / Save PDF</button>
+    </div>
+
+    <h2>0. Real Baseline (Exact &mdash; Do Not Inflate)</h2>
+    <div class="grid g4">
+      <div class="box"><strong>Instagram @realDancab</strong>3 posts &middot; 495 followers &middot; 721 following &middot; last own post 11 Mar 2025 (~20 months ago). No YouTube, TikTok, X, Facebook page, or Google Business Profile found for this brand. LinkedIn URL is in his bio &mdash; confirm it is his.</div>
+      <div class="box"><strong>Website &amp; Booking</strong>No public website and no public booking flow today. A private preview is ready for this meeting. Domain, brand email, and Stripe: confirm what he already has.</div>
+      <div class="box"><strong>On Camera</strong>Not on camera in any original feed post. Recommendation: start with short talking-head Momentico reflections (30&ndash;45s) and a simple filming guide for the first batch.</div>
+      <div class="box"><strong>Public Voice</strong>Own captions have been 100% English. Sessions can already be in English or Spanish. Bilingual public pieces are a growth opportunity, not a current habit.</div>
+    </div>
+
+    <h2>1. Brand Pillars (Personal Brand &mdash; Separate From Med Group)</h2>
+    <p class="note">The themes the brand and content are built on. Mediumship-forward framing is marked to confirm with Danny.</p>
+    <div class="grid g5">
+      <div class="box"><strong>A Life of Listening</strong>Years of answering calls when someone needed a calm voice, into this calling. The listening did not change. Background details stay <em>to confirm</em>.</div>
+      <div class="box"><strong>Life Purpose &amp; God-Given Gifts</strong>As a Life Purpose Coach, he helps people notice the gifts already placed in them. Prefer his words: &ldquo;Knowing that we all have God given gifts.&rdquo;</div>
+      <div class="box"><strong>Connection with Loved Ones <span class="flag">Confirm with Danny</span></strong>Spiritual guidance and mediumship &mdash; including messages from loved ones who have passed, when that gift is present. Held with humility. No guaranteed messages or outcomes.</div>
+      <div class="box"><strong>Un Momentico &mdash; Bilingual Hospitality</strong>The name is the invitation: pause. A Cuban-American coach in South Florida, at home in English and Spanish.</div>
+      <div class="box"><strong>Faith as His Story, Not Your Requirement</strong>His Catholic faith is personal story and motivation, not a condition of sitting with him. All faiths, and none, are welcome if they arrive open.</div>
+    </div>
+
+    <h2 style="margin-top:12px">Brand Guardrails (Principles, Not Pillars)</h2>
+    <div class="grid g4">
+      <div class="box"><strong>Open to Every Faith</strong>Warm spiritual guidance for people of all faiths and none, as long as they arrive open. His own faith is personal story, not a requirement.</div>
+      <div class="box"><strong>Grief &amp; Loved Ones <span class="flag">Confirm with Danny</span></strong>Brandon will check whether this framing fits how Danny wants to talk about the work, and how forward it should sit.</div>
+      <div class="box"><strong>It Ends When You&rsquo;re Ready</strong>A supporting dimension of how a session feels &mdash; not the lead message. One hour, with buffer time, so a breakthrough is never cut short.</div>
+      <div class="box"><strong>Clear Boundaries</strong>For spiritual and personal insight &mdash; not a substitute for medical, psychological, legal, or financial advice. Kept strictly separate from any medical or clinical practice.</div>
+    </div>
+
+    <h2>2. Content Engine, Series &amp; Steady Cadence</h2>
+    <p class="note">The long-form YouTube sitting is the source content for the weekly mix. Short-form he records separately still continues. Spanish public pieces are optional once he confirms a mix.</p>
+    <div class="grid g3" style="margin-bottom:8px">
+      <div class="box"><strong>Long-form YouTube sitting <span class="flag">Agreed</span> <span class="flag">Name and format to confirm</span></strong>Danny has agreed to a monthly long-form sitting. Working title: <em>Take Un Momentico</em>. Format (a podcast-style talk with guests, a solo teaching series, or a listener Q&amp;A) is still to confirm with him. We plan, produce, and manage it for him &mdash; topics, guest outreach, run-of-show, a recording guide, and the edit-and-publish package. Starts at one recording a month; moves to two a month once it is running smoothly. Each sitting is cut into clips for Shorts, Reels, and TikTok, and also feeds carousels, a newsletter section, and a journal article.</div>
+      <div class="box"><strong>Short-form he records separately</strong>Talking-head reflections continue, with a simple filming guide plus hooks and guidance written specifically for short-form.</div>
+      <div class="box"><strong>Faceless carousels</strong>Keep running without him, and get richer as we get more photos, footage, and B-roll of him.</div>
+    </div>
+    <p class="note">Storytelling series the mix can draw from (several already have drafts in review):</p>
+    <div class="series">
+      <span class="chip">Un Momentico weekly (EN, and ES when he is ready)</span>
+      <span class="chip">What a first session feels like</span>
+      <span class="chip">God-given gifts</span>
+      <span class="chip">What mediumship is, and isn&rsquo;t <em>Confirm wording</em></span>
+      <span class="chip">In their own words (approved only)</span>
+      <span class="chip">A life of listening <em>Confirm background</em></span>
+      <span class="chip">From the road (conference takeaways)</span>
+    </div>
+
+    <div class="sched-block">
+    <h2>3. 30 / 60 / 90-Day Schedule</h2>
+    <div class="roadmap">
+      <section class="phase">
+        <h3>Days 1&ndash;30 &middot; Foundation and Launch</h3>
+        <ul>
+          <li><strong>Fix up and set up every platform,</strong> not only Instagram: Instagram (bio, category, booking link, highlights), LinkedIn, Facebook, YouTube, TikTok, X, and Google Business Profile if he sees people in person. Proposed IG bio (children&rsquo;s names omitted unless he asks to keep them): <em>Husband, father &amp; Life Purpose Coach. Spiritual guidance &amp; mediumship &mdash; all faiths welcome. EN &amp; ES. Blessings and love.</em></li>
+          <li>Confirm credentials, exact mediumship wording, in-person vs. virtual, camera comfort, how much Spanish, and how he wants his faith named.</li>
+          <li>Confirm what he has for a domain, brand email, and Stripe. Invite <code>brandon@gil.marketing</code> as a user or admin. Booking and payments go under the active <strong>Un Momentico LLC</strong>.</li>
+          <li>Launch the bilingual website.</li>
+          <li>Film the first talking-head batch (with a simple filming guide) and approve the content already in review.</li>
+          <li>Pick the long-form format, name, and first guests; set up the recording; and record episode 1 alongside that first talking-head batch.</li>
+          <li>Collect verified, client-approved testimonials from clients he already has. Never invent them.</li>
+          <li><strong>Launch initial marketing efforts:</strong> first posts go live, and the steady weekly cadence starts.</li>
+        </ul>
+      </section>
+      <section class="phase">
+        <h3>Days 31&ndash;60 &middot; Review, Refine, Consider Paid</h3>
+        <ul>
+          <li>Review the first month of data. Double down on the topics and hooks that lead to real session inquiries.</li>
+          <li>Keep the weekly filming-and-publishing cadence; add a Spanish or Spanglish piece if he has agreed to a mix.</li>
+          <li>Publish the long-form sitting monthly and clip it into the weekly mix. Podcast-guest outreach complements this (he visits other shows; guests can also sit with him).</li>
+          <li>Refine the booking process, FAQ, and follow-up from real prospect questions.</li>
+          <li>Launch or grow the email letter (monthly, or the cadence he prefers).</li>
+          <li><strong>Consider / test paid ads on Meta</strong> only once the organic cadence and the booking path are working. No spend is committed here; any test is a conversation, not a default.</li>
+          <li>Continue outreach: first guest and partnership conversations.</li>
+          <li>Switch on the Growth &amp; Authority options you want (directories, review routine, speaking kit, first pitches).</li>
+        </ul>
+      </section>
+      <section class="phase">
+        <h3>Days 61&ndash;90 &middot; Evaluate and Grow</h3>
+        <ul>
+          <li>Lock what earned real inquiries, and retire what did not, from the measured 90-day baseline &mdash; not guesses.</li>
+          <li>Grow the letter, and ship a larger campaign from a series that is already working.</li>
+          <li>Evaluate a move to two long-form sittings a month, and consider audio podcast distribution (Spotify, Apple).</li>
+          <li>Decide any other channels worth more weight (a stronger LinkedIn rhythm, or a first small in-person gathering).</li>
+          <li>Deepen the partnerships that responded, and plan the next quarter&rsquo;s conference and speaking presence.</li>
+          <li>Keep Growth &amp; Authority running; try a guest article or a small live session if it fits. The long-term line is a conversation, not a 90-day deliverable.</li>
+          <li>Set the next quarter&rsquo;s targets from real numbers.</li>
+        </ul>
+      </section>
+    </div>
+    </div>
+
+    <section class="outreach">
+      <h3>Outreach and Partnerships &mdash; runs across all 90 days</h3>
+      <p class="note" style="margin-bottom:8px">Built into the schedule, not a side list. Nothing goes out until it is approved. The letter stays separate from outreach. Corporate conversations offer spiritual and life-purpose support as an employee wellness or benefit resource &mdash; not clinical mental health care. He is not a clinician. Any separate medical or clinical practice stays out of this brand entirely. In-person presence (conferences, speaking, gatherings) lives here, not as a media channel.</p>
+      <div class="outreach-grid">
+        <div>
+          <h4>Who we reach</h4>
+          <ul>
+            <li><strong>Podcast guesting</strong> &mdash; shows where a warm, bilingual spiritual guide and life-purpose coach is a natural guest.</li>
+            <li><strong>Corporate partnerships</strong> &mdash; employee wellness and benefit conversations, framed as above.</li>
+            <li><strong>Community partners</strong> &mdash; churches and spiritual centers, wellness studios, grief groups, Hispanic community organizations, and event organizers.</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Days 1&ndash;30 / 31&ndash;60</h4>
+          <ul>
+            <li>Build the lists and the pitches, confirm his conference calendar, and start the first approved outreach.</li>
+            <li>Follow up, book first conversations and guest appearances, and refine the pitch from what people actually ask.</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Days 61&ndash;90</h4>
+          <ul>
+            <li>Appear where booked. Deepen the partnerships that said yes.</li>
+            <li>Plan the next quarter&rsquo;s in-person presence, and capture <em>From the road</em> reflections when he travels.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="outreach">
+      <h3>Growth &amp; Authority &mdash; what we can switch on</h3>
+      <p class="note" style="margin-bottom:8px">From month 2 onward, once the foundation is live. These are options, not promises of coverage, rankings, or results, and no spend is committed here. Nothing is submitted or sent until it is approved.</p>
+      <div class="outreach-grid">
+        <div>
+          <h4>Findable in the right places</h4>
+          <ul>
+            <li><strong>Directory listings and backlinks</strong> &mdash; submitted through our form system, with a placement tracker. Spiritual, coaching, wellness, Hispanic-business, and South Florida local directories.</li>
+            <li><strong>Google review routine</strong> &mdash; a simple ask after a session, only with the client&rsquo;s permission.</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Press, speaking, and writing</h4>
+          <ul>
+            <li><strong>Press and expert quotes</strong> &mdash; journalist-request services, plus Spanish-language local TV, radio, and papers.</li>
+            <li><strong>Speaking page and one-sheet</strong> &mdash; pitched to conferences, churches, retreats, grief and wellness events, and corporate lunch-and-learns.</li>
+            <li><strong>Guest articles</strong> on wellness and faith blogs.</li>
+          </ul>
+        </div>
+        <div>
+          <h4>In the room, and later</h4>
+          <ul>
+            <li><strong>Small live group sessions or workshops</strong> when he is ready.</li>
+            <li><strong>Simple home recording setup</strong> for his space, free or low-cost, planned with him after launch.</li>
+            <li><strong>Long term:</strong> a short bilingual book or guide; a workshop or course; and consistent name and profile information so he is easier to find in AI search.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <h2>4. Channels &amp; KPIs (Targets Are Placeholders &mdash; Baseline Is Exact)</h2>
+    <p class="note">Events and conferences are in-person presence under outreach, not a channel row. Where a new account still needs its starting number, the baseline is set in week 1.</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Channel</th>
+          <th>Role</th>
+          <th>KPIs Tracked</th>
+          <th>Baseline (today)</th>
+          <th>30-Day Target</th>
+          <th>90-Day Target</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Instagram (<code>@realDancab</code>)</strong></td>
+          <td>Home base: profile fix-up, Reels, carousels, stories, bio link</td>
+          <td>Posts/wk, saves, shares, bio-link clicks</td>
+          <td>3 posts, 495 followers, 721 following; last own post 11 Mar 2025</td>
+          <td>{{TARGET_IG_POSTS_30D}}</td>
+          <td>{{TARGET_IG_90D}}</td>
+        </tr>
+        <tr>
+          <td><strong>Website (EN/ES)</strong></td>
+          <td>Credibility, session overview, journal, booking / consultation</td>
+          <td>Qualified requests and booking clicks</td>
+          <td>No public site or booking today</td>
+          <td>{{TARGET_INQUIRIES_30D}}</td>
+          <td>{{TARGET_INQUIRIES_90D}}</td>
+        </tr>
+        <tr>
+          <td><strong>LinkedIn</strong></td>
+          <td>Professional presence, story of the calling, door into workplace conversations</td>
+          <td>Posts, profile visits, conversation starts</td>
+          <td>URL in the Instagram bio &mdash; confirm it is his. Baseline set in week 1</td>
+          <td>{{TARGET_LI_30D}}</td>
+          <td>{{TARGET_LI_90D}}</td>
+        </tr>
+        <tr>
+          <td><strong>Facebook</strong></td>
+          <td>Local South Florida community and bilingual reach</td>
+          <td>Posts, page views, link clicks</td>
+          <td>No brand page found. Baseline set in week 1 if opened</td>
+          <td>{{TARGET_FB_30D}}</td>
+          <td>{{TARGET_FB_90D}}</td>
+        </tr>
+        <tr>
+          <td><strong>YouTube (long-form + Shorts)</strong></td>
+          <td>Home for the monthly sitting, the Shorts cut from it, and short-form he films separately</td>
+          <td>Episodes published, watch time, subscribers, clips per episode</td>
+          <td>None found for this brand</td>
+          <td>{{TARGET_YT_30D}}</td>
+          <td>{{TARGET_YT_90D}}</td>
+        </tr>
+        <tr>
+          <td><strong>TikTok</strong></td>
+          <td>Short-form discovery: clips from the sitting, plus short-form he films separately</td>
+          <td>Clips published and average retention</td>
+          <td>None found for this brand</td>
+          <td>{{TARGET_TT_30D}}</td>
+          <td>{{TARGET_TT_90D}}</td>
+        </tr>
+        <tr>
+          <td><strong>X</strong></td>
+          <td>Light public presence, if he wants it</td>
+          <td>Posts and link clicks</td>
+          <td>None found for this brand. Baseline set in week 1 if opened</td>
+          <td>{{TARGET_X_30D}}</td>
+          <td>{{TARGET_X_90D}}</td>
+        </tr>
+        <tr>
+          <td><strong>Newsletter / monthly letter</strong></td>
+          <td>Owned list, kept separate from outreach</td>
+          <td>Subscribers and open rate (unsent approval first)</td>
+          <td>None</td>
+          <td>{{TARGET_NEWSLETTER_SUBS_30D}}</td>
+          <td>{{TARGET_NEWSLETTER_90D}}</td>
+        </tr>
+        <tr>
+          <td><strong>Google Business Profile</strong></td>
+          <td>Local South Florida discovery <em>(if he sees people in person)</em></td>
+          <td>Profile views and website taps</td>
+          <td>None yet. Baseline set in week 1 if opened</td>
+          <td>{{TARGET_GBP_30D}}</td>
+          <td>{{TARGET_GBP_90D}}</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="foot">
+      <span>Prepared for Danny Cabrera &middot; Un Momentico Coaching Group &middot; Active entity: Un Momentico LLC</span>
+      <span>Editable markdown: <code>rollout-plan/rollout-plan.md</code></span>
+    </div>
+  </main>
+</body>
+</html>
