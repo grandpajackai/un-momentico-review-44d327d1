@@ -135,7 +135,7 @@ From month 2 onward, once the foundation is live. These are options, not promise
 
 ## 6. Channels & KPIs (Targets Are Placeholders — Baseline Is Exact)
 
-Events and conferences are not listed here; they live in the outreach and in-person presence track above. 30- and 90-day targets stay blank until you set them together. Where a starting number still needs to be pulled from a newly opened account, the baseline is **set in week 1**.
+Events and conferences are not listed here; they live in the outreach and in-person presence track above. 30- and 90-day targets stay blank until you set them together. Where a starting number still needs to be pulled from a newly opened account, the baseline is **set in week 1**. Every KPI below is tracked live in his Command Center (`../command-center/index.html`) with a plain-English weekly summary.
 
 | Channel | Role | KPIs tracked | Baseline (today) | 30-day target | 90-day target |
 |---|---|---|---|---|---|

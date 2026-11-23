@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Un Momentico &mdash; Command Center (Sample)</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/command.css">
+  <script src="assets/command.js" defer></script>
+</head>
+<body>
+  <div class="sample-banner" role="region" aria-label="Sample data notice">
+    <span class="sample-banner-main">
+      <span class="sample-banner-dot" aria-hidden="true"></span>
+      <span id="sample-banner-text">Sample data: your real numbers appear once accounts are connected</span>
+    </span>
+    <span class="sample-banner-sub">Refreshes automatically once connected &middot; Nothing posts without your OK</span>
+  </div>
+
+  <header class="topbar">
+    <a class="brand-lockup" href="../client-portal/index.html">
+      <svg class="fan" viewBox="-4.8 -4.8 89.6 44.8" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><path d="M17.7,40.0 L4.0,40.0 A36.0,36.0 0 0 1 7.6,24.4 L19.9,30.3 A22.3,22.3 0 0 0 17.7,40.0Z" fill="#2F5D50" fill-opacity="0.88"/><path d="M19.9,30.3 L7.6,24.4 A36.0,36.0 0 0 1 17.6,11.9 L26.1,22.5 A22.3,22.3 0 0 0 19.9,30.3Z" fill="#C99A5B" fill-opacity="0.88"/><path d="M26.1,22.5 L17.6,11.9 A36.0,36.0 0 0 1 32.0,4.9 L35.0,18.2 A22.3,22.3 0 0 0 26.1,22.5Z" fill="#C47C6E" fill-opacity="0.88"/><path d="M35.0,18.2 L32.0,4.9 A36.0,36.0 0 0 1 48.0,4.9 L45.0,18.2 A22.3,22.3 0 0 0 35.0,18.2Z" fill="#9DBDB0" fill-opacity="0.88"/><path d="M45.0,18.2 L48.0,4.9 A36.0,36.0 0 0 1 62.4,11.9 L53.9,22.5 A22.3,22.3 0 0 0 45.0,18.2Z" fill="#E2C690" fill-opacity="0.88"/><path d="M53.9,22.5 L62.4,11.9 A36.0,36.0 0 0 1 72.4,24.4 L60.1,30.3 A22.3,22.3 0 0 0 53.9,22.5Z" fill="#3E6E5F" fill-opacity="0.88"/><path d="M60.1,30.3 L72.4,24.4 A36.0,36.0 0 0 1 76.0,40.0 L62.3,40.0 A22.3,22.3 0 0 0 60.1,30.3Z" fill="#B9796A" fill-opacity="0.88"/><path d="M31.4,40.0 L17.7,40.0 A22.3,22.3 0 0 1 28.8,20.7 L35.7,32.5 A8.6,8.6 0 0 0 31.4,40.0Z" fill="#9DBDB0" fill-opacity="0.8"/><path d="M35.7,32.5 L28.8,20.7 A22.3,22.3 0 0 1 51.2,20.7 L44.3,32.5 A8.6,8.6 0 0 0 35.7,32.5Z" fill="#3E6E5F" fill-opacity="0.8"/><path d="M44.3,32.5 L51.2,20.7 A22.3,22.3 0 0 1 62.3,40.0 L48.6,40.0 A8.6,8.6 0 0 0 44.3,32.5Z" fill="#D7B57A" fill-opacity="0.8"/><path d="M31.4,40.0 A8.6,8.6 0 0 1 48.6,40.0Z" fill="#E2C690" fill-opacity=".95"/><g fill="none" stroke="#1E3A32" stroke-width="1.6" stroke-linejoin="round"><path d="M4.0,40.0 A36.0,36.0 0 0 1 76.0,40.0"/><path d="M17.7,40.0 A22.3,22.3 0 0 1 62.3,40.0"/><path d="M31.4,40.0 A8.6,8.6 0 0 1 48.6,40.0"/><line x1="19.9" y1="30.3" x2="7.6" y2="24.4"/><line x1="26.1" y1="22.5" x2="17.6" y2="11.9"/><line x1="35.0" y1="18.2" x2="32.0" y2="4.9"/><line x1="45.0" y1="18.2" x2="48.0" y2="4.9"/><line x1="53.9" y1="22.5" x2="62.4" y2="11.9"/><line x1="60.1" y1="30.3" x2="72.4" y2="24.4"/><line x1="35.7" y1="32.5" x2="28.8" y2="20.7"/><line x1="44.3" y1="32.5" x2="51.2" y2="20.7"/><line x1="2.0" y1="39.2" x2="78.0" y2="39.2"/></g><path d="M1.4,40.0 A38.6,38.6 0 0 1 78.6,40.0" fill="none" stroke="#1E3A32" stroke-width="3.5"/></svg>
+      <span>
+        <span class="brand-name">Un Momentico</span>
+        <span class="brand-sub">Command Center &middot; Danny Cabrera</span>
+      </span>
+    </a>
+    <div class="topbar-actions">
+      <a class="btn ghost" href="../client-portal/index.html">&larr; Back to Walkthrough</a>
+      <a class="btn primary" href="report.html">Sample Monthly Report &rarr;</a>
+    </div>
+  </header>
+
+  <main class="cc-wrap">
+    <section class="cc-hero" aria-label="Command Center Overview">
+      <svg class="cc-hero-fan" viewBox="-4.8 -4.8 146.4 75.4" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><path d="M8.4,68.4 A60,60 0 0 1 14.3,42.4 L34.9,52.3 A37.2,37.2 0 0 0 31.2,68.4Z" fill="#2F5D50"/><path d="M14.3,42.4 A60,60 0 0 1 31.0,21.5 L45.2,39.3 A37.2,37.2 0 0 0 34.9,52.3Z" fill="#C99A5B"/><path d="M31.0,21.5 A60,60 0 0 1 55.0,9.9 L60.1,32.1 A37.2,37.2 0 0 0 45.2,39.3Z" fill="#C47C6E"/><path d="M55.0,9.9 A60,60 0 0 1 81.8,9.9 L76.7,32.1 A37.2,37.2 0 0 0 60.1,32.1Z" fill="#9DBDB0"/><path d="M81.8,9.9 A60,60 0 0 1 105.8,21.5 L91.6,39.3 A37.2,37.2 0 0 0 76.7,32.1Z" fill="#E2C690"/><path d="M105.8,21.5 A60,60 0 0 1 122.5,42.4 L101.9,52.3 A37.2,37.2 0 0 0 91.6,39.3Z" fill="#3E6E5F"/><path d="M122.5,42.4 A60,60 0 0 1 128.4,68.4 L105.6,68.4 A37.2,37.2 0 0 0 101.9,52.3Z" fill="#B9796A"/><path d="M54.0,68.4 A14.4,14.4 0 0 1 82.8,68.4Z" fill="#E2C690"/><g fill="none" stroke="#E2C690" stroke-width="2.4"><path d="M54.0,68.4 A14.4,14.4 0 0 1 82.8,68.4"/><path d="M31.2,68.4 A37.2,37.2 0 0 1 105.6,68.4"/><path d="M8.4,68.4 A60,60 0 0 1 128.4,68.4"/></g></svg>
+      <div>
+        <p class="hero-kicker">Your operating &amp; reporting view</p>
+        <h1>One calm place for <em>everything</em> running.</h1>
+        <p class="hero-copy">See only what needs your attention today, follow every process from draft to published, and watch your platforms, inquiries, and bookings grow side by side once your accounts are connected.</p>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <div class="hero-stat-top"><span class="lbl">Need you today</span><span class="sample-tag on-dark">Sample</span></div>
+          <strong id="hero-tasks-open">5</strong>
+          <small>Quick approvals &amp; replies</small>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-top"><span class="lbl">Inquiries (30d)</span><span class="sample-tag on-dark">Sample</span></div>
+          <strong>14</strong>
+          <small>57% EN &middot; 43% ES</small>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-top"><span class="lbl">Sessions paid</span><span class="sample-tag on-dark">Sample</span></div>
+          <strong>6</strong>
+          <small>Via Cal.com + Stripe</small>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-top"><span class="lbl">Accounts live</span><span class="sample-tag on-dark">Live</span></div>
+          <strong>0 / 11</strong>
+          <small>Awaiting admin invites</small>
+        </div>
+      </div>
+    </section>
+
+    <nav class="jump-nav" aria-label="Dashboard sections">
+      <a class="jump-link" href="#today">1. Today, for Danny</a>
+      <a class="jump-link" href="#operations">2. Everything running</a>
+      <a class="jump-link" href="#platforms">3. Platforms</a>
+      <a class="jump-link" href="#website-search">4. Website &amp; search</a>
+      <a class="jump-link" href="#leads-bookings">5. Leads &amp; bookings</a>
+      <a class="jump-link" href="#sales">6. Sales</a>
+      <a class="jump-link" href="#newsletter-show">7. Newsletter &amp; show</a>
+      <a class="jump-link" href="#outreach">8. Outreach</a>
+      <a class="jump-link" href="#goals">9. Goals</a>
+      <a class="jump-link" href="#reports">10. Reports</a>
+      <a class="jump-link" href="#connections">11. Connections</a>
+    </nav>
+
+    <!-- 1. TODAY, FOR DANNY -->
+    <section class="cc-section" id="today">
+      <div class="sec-head">
+        <div>
+          <span class="sec-kicker">1 &middot; Today, for Danny</span>
+          <h2>Only what needs your eyes or voice</h2>
+          <p class="sec-sub">Everything behind the scenes is organized for you. Tap <strong>Mark done</strong> as you clear each item; progress saves right in this browser.</p>
+        </div>
+        <div class="sec-badges">
+          <span class="sample-tag">Sample</span>
+          <span class="status-chip is-waiting" id="today-count">0 of 5 done</span>
+        </div>
+      </div>
+      <div class="today-list" id="today-list"></div>
+      <div class="today-foot">
+        <span>Saves automatically on this device &middot; Nothing is sent or posted when you check an item off.</span>
+        <button type="button" class="btn ghost" id="reset-tasks">Reset sample tasks</button>
+      </div>
+    </section>
+
+    <!-- 2. EVERYTHING RUNNING -->
+    <section class="cc-section" id="operations">
+      <div class="sec-head">
+        <div>
+          <span class="sec-kicker">2 &middot; Everything running</span>
+          <h2>Every system connected, in plain sight</h2>
+          <p class="sec-sub">Follow each part of Un Momentico from idea to published, with clear status chips showing what is active, waiting on your OK, paused, or not connected yet.</p>
+        </div>
+        <div class="sec-badges">
+          <span class="sample-tag">Sample</span>
+        </div>
+      </div>
+      <div class="ops-grid" id="ops-grid"></div>
+    </section>
+
+    <!-- 3. GROWTH BY PLATFORM -->
+    <section class="cc-section" id="platforms">
+      <div class="sec-head">
+        <div>
+          <span class="sec-kicker">3 &middot; Growth by platform</span>
+          <h2>Audience, reach, and engagement across channels</h2>
+          <p class="sec-sub">Modest, realistic 60-day sample growth starting from your real Instagram baseline (495 followers today) as your other channels come online.</p>
+        </div>
+        <div class="sec-badges">
+          <span class="sample-tag">Sample</span>
+        </div>
+      </div>
+      <div class="platform-grid" id="platform-grid"></div>
+    </section>
+
+    <!-- 4. WEBSITE AND SEARCH -->
+    <section class="cc-section" id="website-search">
+      <div class="sec-head">
+        <div>
+          <span class="sec-kicker">4 &middot; Website and search</span>
+          <h2>Visits, search queries, conversions, and AI answers</h2>
+          <p class="sec-sub">Measured through Google Analytics and Search Console once your domain goes live.</p>
+        </div>
+        <div class="sec-badges">
+          <span class="sample-tag">Sample</span>
+        </div>
+      </div>
+      <div class="kpi-strip">
+        <div class="kpi-tile">
+          <span>Website visits (30d)</span>
+          <strong id="ws-visits">428</strong>
+          <small id="ws-visits-delta">+34% vs prior 30d</small>
+        </div>
+        <div class="kpi-tile">
+          <span>Booking-page conversion</span>
+          <strong id="ws-conv">28%</strong>
+          <small id="ws-conv-sub">14 inquiries from 50 visits</small>
+        </div>
+        <div class="kpi-tile">
+          <span>AI answer visibility</span>
+          <strong id="ws-ai-status" style="font-size:1.35rem;padding-top:6px">Not indexed yet</strong>
+          <small>Checked monthly after launch</small>
+        </div>
+      </div>
+      <div class="grid-2">
+        <div class="subcard">
+          <div class="subcard-head"><h3>Top pages</h3><span class="sample-tag">Sample</span></div>
+          <div class="table-wrap">
+            <table class="clean-table">
+              <thead><tr><th>Page</th><th class="num">Views</th></tr></thead>
+              <tbody id="ws-pages"></tbody>
+            </table>
+          </div>
+        </div>
+        <div class="subcard">
+          <div class="subcard-head"><h3>Top search queries</h3><span class="sample-tag">Sample</span></div>
+          <div class="table-wrap">
+            <table class="clean-table">
+              <thead><tr><th>Search query</th><th class="num">Clicks</th><th class="num">Avg pos.</th></tr></thead>
+              <tbody id="ws-queries"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="ai-box">
+        <div>
+          <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:4px"><strong style="color:var(--monte)">Do AI answers mention Un Momentico &amp; Danny Cabrera yet?</strong><span class="sample-tag">Sample</span></div>
+          <p id="ws-ai-detail" style="margin:0;font-size:13.5px;color:var(--tinta-2);max-width:66ch"></p>
+        </div>
+        <div class="ai-checks" id="ws-ai-checks"></div>
+      </div>
+    </section>
+
+    <!-- 5. LEADS AND BOOKINGS -->
+    <section class="cc-section" id="leads-bookings">
+      <div class="sec-head">
+        <div>
+          <span class="sec-kicker">5 &middot; Leads and bookings</span>
+          <h2>From first inquiry to completed session</h2>
+          <p class="sec-sub">Shows where people find you, how many take a free intro call, and the balance between English and Spanish inquiries.</p>
+        </div>
+        <div class="sec-badges">
+          <span class="sample-tag">Sample</span>
+        </div>
+      </div>
+      <div class="grid-2">
+        <div class="subcard">
+          <div class="subcard-head"><h3>Inquiry-to-session funnel</h3><span class="sample-tag">Sample</span></div>
+          <div class="funnel-list" id="lb-funnel"></div>
+        </div>
+        <div class="subcard" style="display:grid;gap:18px;align-content:start">
+          <div>
+            <div class="subcard-head"><h3>Where leads came from</h3><span class="sample-tag">Sample</span></div>
+            <div class="funnel-list" id="lb-sources"></div>
+          </div>
+          <div style="padding-top:12px;border-top:1px solid var(--linea)">
+            <div class="subcard-head" style="margin-bottom:4px"><h3>Language split (EN vs ES)</h3><span class="sample-tag">Sample</span></div>
+            <div class="lang-split-bar" id="lb-lang-bar"></div>
+            <div class="lang-legend" id="lb-lang-legend"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. SALES -->
+    <section class="cc-section" id="sales">
+      <div class="sec-head">
+        <div>
+          <span class="sec-kicker">6 &middot; Sales</span>
+          <h2>Sessions paid and revenue trend</h2>
+          <p class="sec-sub">Pulled from Stripe and Cal.com under Un Momentico LLC once connected. Illustrative sample trend shown here with no specific prices.</p>
+        </div>
+        <div class="sec-badges">
+          <span class="sample-tag">Sample</span>
+        </div>
+      </div>
+      <div class="sales-layout">
+        <div class="sales-summary">
+          <div class="kpi-tile">
+            <span>Sessions paid (30d)</span>
+            <strong id="sales-paid">6</strong>
+            <small id="sales-trend-lbl">+20% sessions vs prior period</small>
+          </div>
+          <div class="kpi-tile">
+            <span>Returning clients</span>
+            <strong id="sales-repeat">2</strong>
+            <small>Follow-on sittings booked</small>
+          </div>
+          <div class="subcard" style="padding:12px 14px">
+            <p id="sales-disclaimer" style="margin:0;font-size:13px;color:var(--tinta-2)"></p>
+          </div>
+        </div>
+        <div class="chart-box">
+          <div class="subcard-head">
+            <h3>6-week sessions &amp; relative revenue trend</h3>
+            <span class="sample-tag">Sample &middot; No prices shown</span>
+          </div>
+          <div id="sales-chart"></div>
+          <div class="lang-legend" style="margin-top:6px;font-size:12px;color:var(--muted)">
+            <span><span class="swatch" style="background:#9DBDB0"></span>Bars: sessions paid per week</span>
+            <span><span class="swatch" style="background:#1E3A32"></span>Line: relative revenue trend index</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. NEWSLETTER AND LONG-FORM -->
+    <section class="cc-section" id="newsletter-show">
+      <div class="sec-head">
+        <div>
+          <span class="sec-kicker">7 &middot; Newsletter and long-form</span>
+          <h2>Your monthly letter and <em>Take Un Momentico</em></h2>
+          <p class="sec-sub">Owned readers on Beehiiv alongside watch time and short clips produced from each YouTube sitting.</p>
+        </div>
+        <div class="sec-badges">
+          <span class="sample-tag">Sample</span>
+        </div>
+      </div>
+      <div class="grid-2">
+        <div class="subcard">
+          <div class="subcard-head"><h3>Monthly newsletter (Beehiiv)</h3><span class="sample-tag">Sample</span></div>
+          <div class="plat-metrics" style="border-top:0;padding-top:0;margin-bottom:12px">
+            <div class="plat-m"><span>Subscribers</span><strong id="nl-subs">84</strong></div>
+            <div class="plat-m"><span>Open rate</span><strong id="nl-open">48.2%</strong></div>
+            <div class="plat-m"><span>Reader replies</span><strong id="nl-replies">6</strong></div>
+          </div>
+          <p style="margin:0;font-size:13.5px;color:var(--tinta-2)"><strong>Latest draft:</strong> <span id="nl-issue">Issue 1 (Sample): Knowing when to pause</span></p>
+        </div>
+        <div class="subcard">
+          <div class="subcard-head"><h3><em>Take Un Momentico</em> (YouTube)</h3><span class="sample-tag">Sample</span></div>
+          <div class="plat-metrics" style="border-top:0;padding-top:0;margin-bottom:12px;grid-template-columns:repeat(4,minmax(0,1fr))">
+            <div class="plat-m"><span>Episodes</span><strong id="lf-episodes">2</strong></div>
+            <div class="plat-m"><span>Avg watch</span><strong id="lf-avg">19m 10s</strong></div>
+            <div class="plat-m"><span>Total watch</span><strong id="lf-total">46 hrs</strong></div>
+            <div class="plat-m"><span>Clips / ep.</span><strong id="lf-clips">8</strong></div>
+          </div>
+          <p style="margin:0;font-size:13.5px;color:var(--tinta-2)"><strong>Top clip:</strong> <span id="lf-topclip">Why a session ends when you are ready (42s)</span></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. OUTREACH AND PARTNERSHIPS -->
+    <section class="cc-section" id="outreach">
+      <div class="sec-head">
+        <div>
+          <span class="sec-kicker">8 &middot; Outreach and partnerships</span>
+          <h2>Podcasts, local partners, and directories</h2>
+          <p class="sec-sub">Growth &amp; authority work starting from month 2 onward. Nothing is submitted or sent without your approval.</p>
+        </div>
+        <div class="sec-badges">
+          <span class="sample-tag">Sample</span>
+        </div>
+      </div>
+      <div class="grid-3" id="outreach-grid"></div>
+    </section>
+
+    <!-- 9. GOALS -->
+    <section class="cc-section" id="goals">
+      <div class="sec-head">
+        <div>
+          <span class="sec-kicker">9 &middot; Goals</span>
+          <h2>Targets set together in week 1</h2>
+          <p class="sec-sub">We never invent numbers for you. Once we pull your week-1 baselines together, we fill these targets in and the progress bars update automatically.</p>
+        </div>
+        <div class="sec-badges">
+          <span class="sample-tag">Sample &middot; Set together</span>
+        </div>
+      </div>
+      <div class="table-wrap">
+        <table class="clean-table">
+          <thead>
+            <tr>
+              <th>Channel &amp; KPI</th>
+              <th>Real baseline today</th>
+              <th>30-day target</th>
+              <th>90-day target</th>
+              <th>Progress</th>
+            </tr>
+          </thead>
+          <tbody id="goals-body"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 10. REPORTS -->
+    <section class="cc-section" id="reports">
+      <div class="sec-head">
+        <div>
+          <span class="sec-kicker">10 &middot; Reports</span>
+          <h2>Weekly plain-English summary &amp; monthly report</h2>
+          <p class="sec-sub">A calm 5-bullet note every week so you never have to dig through spreadsheets, plus a printable monthly report.</p>
+        </div>
+        <div class="sec-badges">
+          <span class="sample-tag">Sample</span>
+        </div>
+      </div>
+      <div class="subcard">
+        <div class="subcard-head">
+          <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap"><h3 id="weekly-label">Sample week</h3><span class="sample-tag">Sample</span></div>
+          <a class="btn primary" href="report.html">Open Sample Monthly Report &rarr;</a>
+        </div>
+        <ul class="summary-list" id="weekly-bullets"></ul>
+      </div>
+    </section>
+
+    <!-- 11. CONNECTIONS -->
+    <section class="cc-section" id="connections">
+      <div class="sec-head">
+        <div>
+          <span class="sec-kicker">11 &middot; Connections</span>
+          <h2>How your real data flows in &mdash; with zero passwords shared</h2>
+          <p class="sec-sub">You stay the owner of every account. Inviting <code>brandon@gil.marketing</code> as an admin or manager lets your numbers feed here cleanly.</p>
+        </div>
+        <div class="sec-badges">
+          <span class="status-chip is-disconnected">0 / 11 connected</span>
+        </div>
+      </div>
+      <div class="table-wrap">
+        <table class="clean-table">
+          <thead>
+            <tr>
+              <th>Data source</th>
+              <th>Status</th>
+              <th>What it feeds here</th>
+              <th>How it connects</th>
+            </tr>
+          </thead>
+          <tbody id="connections-body"></tbody>
+        </table>
+      </div>
+      <div class="reassure-box">
+        <span><strong>Automatic refresh, approval-first always:</strong> Once connected, this Command Center refreshes automatically every day &mdash; and nothing ever posts, replies, or sends without your clear OK.</span>
+        <a class="btn" href="../accounts-checklist/checklist.html">Open Accounts Checklist &rarr;</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-foot">
+    <span><em>Blessings and love.</em> &middot; Un Momentico Coaching Group &middot; Sample Command Center prepared by Gil Marketing.</span>
+    <a href="../client-portal/index.html">&larr; Return to Walkthrough</a>
+  </footer>
+</body>
+</html>

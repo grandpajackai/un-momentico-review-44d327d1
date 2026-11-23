@@ -3,7 +3,7 @@
 
   document.documentElement.classList.add('js-ready');
 
-  var STORAGE_KEY = 'un_momentico_danny_feedback_v2';
+  var STORAGE_KEY = 'un_momentico_danny_feedback_v3';
   var STEP_META = [
     { id: 'step-0', num: '0', title: 'Welcome' },
     { id: 'step-1', num: '1', title: 'The vision' },
@@ -12,7 +12,8 @@
     { id: 'step-4', num: '4', title: 'Your content' },
     { id: 'step-5', num: '5', title: 'The rollout plan' },
     { id: 'step-6', num: '6', title: 'Getting set up' },
-    { id: 'step-7', num: '7', title: 'What we need from you' }
+    { id: 'step-7', num: '7', title: 'Tracking and reporting' },
+    { id: 'step-8', num: '8', title: 'What we need from you' }
   ];
   var LABELS = {
     love: 'Love it',

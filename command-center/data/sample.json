@@ -1,0 +1,375 @@
+{
+  "meta": {
+    "brand": "Un Momentico Coaching Group",
+    "owner": "Danny Cabrera",
+    "notice": "Sample data: your real numbers appear once accounts are connected",
+    "period": "Sample 30-day snapshot",
+    "refreshNote": "Once accounts are connected, numbers refresh automatically each day. Nothing ever posts, publishes, or sends without your clear OK.",
+    "adminEmail": "brandon@gil.marketing"
+  },
+  "todayTasks": [
+    {
+      "id": "approve-posts",
+      "title": "Approve this week's posts",
+      "detail": "2 bilingual carousels and 2 short clips waiting in your review queue",
+      "due": "Tue, Nov 24",
+      "category": "Content"
+    },
+    {
+      "id": "record-friday",
+      "title": "Record Friday's short-form batch",
+      "detail": "3 calm 40-second Momentico reflections from the filming guide",
+      "due": "Fri, Nov 27",
+      "category": "Video"
+    },
+    {
+      "id": "reply-inquiries",
+      "title": "Reply to 2 new inquiries",
+      "detail": "One English request (life purpose), one Spanish request (family sitting)",
+      "due": "Today",
+      "category": "Leads"
+    },
+    {
+      "id": "confirm-guest",
+      "title": "Confirm a podcast guest slot",
+      "detail": "South Florida bilingual wellness podcast invited you for a 30-minute conversation",
+      "due": "Thu, Nov 26",
+      "category": "Outreach"
+    },
+    {
+      "id": "sign-testimonial",
+      "title": "Sign off a testimonial",
+      "detail": "Confirm written permission and initials or first name before adding to the site",
+      "due": "Wed, Nov 25",
+      "category": "Website"
+    }
+  ],
+  "operations": [
+    {
+      "id": "content-engine",
+      "name": "Content engine",
+      "status": "Waiting on you",
+      "statusKey": "waiting",
+      "summary": "Carousels, short reflections, and journal pieces drafted from your voice guide — nothing posts without your sign-off.",
+      "stages": [
+        { "label": "Drafted", "state": "done", "note": "5 ready" },
+        { "label": "Approved", "state": "current", "note": "Your review" },
+        { "label": "Scheduled", "state": "pending", "note": "On hold" },
+        { "label": "Posted", "state": "pending", "note": "0 live" }
+      ]
+    },
+    {
+      "id": "long-form-show",
+      "name": "Long-form show: Take Un Momentico",
+      "status": "Waiting on you",
+      "statusKey": "waiting",
+      "summary": "One unhurried monthly sitting on YouTube that feeds clips, quotes, and reflections all month.",
+      "stages": [
+        { "label": "Plan", "state": "done", "note": "Ep. 1 outline" },
+        { "label": "Record", "state": "current", "note": "Pick date" },
+        { "label": "Edit", "state": "pending", "note": "Full + ES subs" },
+        { "label": "Clips", "state": "pending", "note": "8 Shorts" }
+      ]
+    },
+    {
+      "id": "website-seo",
+      "name": "Website and search (EN / ES)",
+      "status": "Active",
+      "statusKey": "active",
+      "summary": "Bilingual preview built with all four session guides, journal, and inquiry flow ready for your domain.",
+      "stages": [
+        { "label": "Bilingual build", "state": "done", "note": "Complete" },
+        { "label": "Search setup", "state": "done", "note": "Ready" },
+        { "label": "Domain link", "state": "current", "note": "Confirm domain" }
+      ]
+    },
+    {
+      "id": "newsletter",
+      "name": "Monthly newsletter",
+      "status": "Not connected yet",
+      "statusKey": "disconnected",
+      "summary": "Calm monthly letter via Beehiiv, kept strictly separate from any outreach.",
+      "stages": [
+        { "label": "Issue 1 draft", "state": "done", "note": "Ready" },
+        { "label": "Beehiiv invite", "state": "pending", "note": "Pending" },
+        { "label": "Send with OK", "state": "pending", "note": "After review" }
+      ]
+    },
+    {
+      "id": "outreach-partners",
+      "name": "Outreach and partnerships",
+      "status": "Paused",
+      "statusKey": "paused",
+      "summary": "Podcasts, corporate wellness, community partners, and local directories. Sample drafts ready; paused until you approve.",
+      "stages": [
+        { "label": "Target list", "state": "done", "note": "Prepared" },
+        { "label": "Draft pitches", "state": "done", "note": "3 examples" },
+        { "label": "Send & log", "state": "pending", "note": "Paused for OK" }
+      ]
+    },
+    {
+      "id": "reviews",
+      "name": "Google reviews",
+      "status": "Not connected yet",
+      "statusKey": "disconnected",
+      "summary": "Gentle follow-up invitation after completed sessions, only with the person's permission.",
+      "stages": [
+        { "label": "Profile setup", "state": "pending", "note": "If in person" },
+        { "label": "Permission ask", "state": "pending", "note": "Post-session" }
+      ]
+    },
+    {
+      "id": "booking",
+      "name": "Booking and calendar",
+      "status": "Not connected yet",
+      "statusKey": "disconnected",
+      "summary": "Free intro consultation and 1-hour sessions via Cal.com + Stripe under Un Momentico LLC.",
+      "stages": [
+        { "label": "Hours confirmed", "state": "current", "note": "Today's list" },
+        { "label": "Cal.com + Stripe", "state": "pending", "note": "Connect" }
+      ]
+    }
+  ],
+  "platforms": [
+    {
+      "name": "Instagram",
+      "handle": "@realDancab",
+      "note": "Baseline today: 495 followers",
+      "metricLabel": "Followers",
+      "followers": "618",
+      "delta": "+24.8%",
+      "reachLabel": "30d reach",
+      "reach": "4,820",
+      "engLabel": "Engagement",
+      "engagement": "4.6%",
+      "spark": [495, 508, 524, 541, 566, 590, 618]
+    },
+    {
+      "name": "YouTube",
+      "handle": "Long-form + Shorts",
+      "note": "Home for Take Un Momentico",
+      "metricLabel": "Subscribers",
+      "followers": "142",
+      "delta": "+142",
+      "reachLabel": "30d views",
+      "reach": "1,940",
+      "engLabel": "Avg retention",
+      "engagement": "44%",
+      "spark": [12, 28, 46, 71, 96, 118, 142]
+    },
+    {
+      "name": "TikTok",
+      "handle": "Short-form clips",
+      "note": "EN & ES reflections",
+      "metricLabel": "Followers",
+      "followers": "310",
+      "delta": "+310",
+      "reachLabel": "30d views",
+      "reach": "3,450",
+      "engLabel": "Engagement",
+      "engagement": "5.2%",
+      "spark": [35, 78, 120, 165, 215, 268, 310]
+    },
+    {
+      "name": "LinkedIn",
+      "handle": "Personal profile",
+      "note": "Workplace & calling stories",
+      "metricLabel": "Followers",
+      "followers": "348",
+      "delta": "+18%",
+      "reachLabel": "30d impressions",
+      "reach": "1,280",
+      "engLabel": "Engagement",
+      "engagement": "3.8%",
+      "spark": [295, 302, 310, 319, 328, 339, 348]
+    },
+    {
+      "name": "Facebook",
+      "handle": "South Florida community",
+      "note": "Bilingual family & local shares",
+      "metricLabel": "Page followers",
+      "followers": "118",
+      "delta": "+118",
+      "reachLabel": "30d reach",
+      "reach": "860",
+      "engLabel": "Engagement",
+      "engagement": "3.4%",
+      "spark": [14, 29, 44, 62, 81, 98, 118]
+    },
+    {
+      "name": "Google Business Profile",
+      "handle": "Local South Florida",
+      "note": "If seeing clients in person",
+      "metricLabel": "Profile views",
+      "followers": "64",
+      "delta": "+64",
+      "reachLabel": "Website taps",
+      "reach": "19",
+      "engLabel": "Direction / calls",
+      "engagement": "7",
+      "spark": [6, 12, 21, 30, 41, 52, 64]
+    },
+    {
+      "name": "X",
+      "handle": "Optional channel",
+      "note": "Short daily thoughts",
+      "metricLabel": "Followers",
+      "followers": "74",
+      "delta": "+74",
+      "reachLabel": "30d impressions",
+      "reach": "520",
+      "engLabel": "Engagement",
+      "engagement": "2.1%",
+      "spark": [10, 18, 28, 39, 49, 61, 74]
+    }
+  ],
+  "websiteSearch": {
+    "visits": "428",
+    "visitsDelta": "+34% vs prior 30d",
+    "visitsSeries": [42, 54, 61, 58, 72, 68, 73],
+    "bookingVisits": "50",
+    "bookingConversions": "14",
+    "conversionRate": "28%",
+    "topPages": [
+      { "page": "Home (EN / ES)", "views": 164 },
+      { "page": "Sessions overview", "views": 98 },
+      { "page": "Messages from loved ones", "views": 62 },
+      { "page": "About Danny", "views": 54 },
+      { "page": "Request a session", "views": 50 }
+    ],
+    "searchQueries": [
+      { "query": "spiritual guidance south florida", "clicks": 18, "pos": "Pos 8" },
+      { "query": "bilingual life purpose coach miami", "clicks": 14, "pos": "Pos 11" },
+      { "query": "un momentico danny cabrera", "clicks": 12, "pos": "Pos 2" },
+      { "query": "guia espiritual en espanol miami", "clicks": 9, "pos": "Pos 14" }
+    ],
+    "aiAnswers": {
+      "status": "Not indexed yet",
+      "detail": "Tracked monthly across major AI answer engines once your website, Google Business Profile, and directory listings go live with consistent name and bio details.",
+      "checks": [
+        { "engine": "Google AI Overviews", "state": "Pending site launch" },
+        { "engine": "ChatGPT Search", "state": "Pending site launch" },
+        { "engine": "Perplexity", "state": "Pending site launch" }
+      ]
+    }
+  },
+  "leadsBookings": {
+    "funnel": [
+      { "stage": "Inquiries", "count": 14, "note": "Website form & direct messages" },
+      { "stage": "Free consultations", "count": 9, "note": "15-min fit calls scheduled" },
+      { "stage": "Sessions booked", "count": 6, "note": "Confirmed on Cal.com" },
+      { "stage": "Completed", "count": 5, "note": "1 upcoming this week" }
+    ],
+    "sources": [
+      { "source": "Website request form", "count": 6 },
+      { "source": "Instagram bio & DMs", "count": 4 },
+      { "source": "Google search", "count": 2 },
+      { "source": "Word of mouth / referral", "count": 1 },
+      { "source": "LinkedIn", "count": 1 }
+    ],
+    "languageSplit": {
+      "enCount": 8,
+      "enPct": 57,
+      "esCount": 6,
+      "esPct": 43
+    }
+  },
+  "sales": {
+    "sessionsPaid30d": 6,
+    "repeatClients": 2,
+    "trendLabel": "+20% sessions vs prior period",
+    "disclaimer": "Sample trend only — no specific prices shown. Live Stripe and Cal.com totals appear once connected.",
+    "series": [
+      { "period": "Wk 1", "sessions": 1, "index": 100 },
+      { "period": "Wk 2", "sessions": 1, "index": 115 },
+      { "period": "Wk 3", "sessions": 2, "index": 165 },
+      { "period": "Wk 4", "sessions": 2, "index": 185 },
+      { "period": "Wk 5", "sessions": 3, "index": 230 },
+      { "period": "Wk 6", "sessions": 3, "index": 260 }
+    ]
+  },
+  "newsletterLongForm": {
+    "newsletter": {
+      "platform": "Beehiiv",
+      "subscribers": 84,
+      "openRate": "48.2%",
+      "replies": 6,
+      "lastIssue": "Issue 1 (Sample): Knowing when to pause"
+    },
+    "longForm": {
+      "showTitle": "Take Un Momentico",
+      "episodes": 2,
+      "avgWatchTime": "19m 10s",
+      "totalWatchHours": "46 hrs",
+      "clipsPerEpisode": 8,
+      "topClip": "Why a session ends when you are ready (42s)"
+    }
+  },
+  "outreach": {
+    "podcasts": {
+      "pitched": 6,
+      "booked": 2,
+      "aired": 1,
+      "note": "Bilingual wellness, grief support, and South Florida community shows"
+    },
+    "partners": {
+      "conversations": 4,
+      "note": "2 wellness spaces, 1 church community group, 1 corporate lunch-and-learn"
+    },
+    "directories": {
+      "live": 7,
+      "pending": 12,
+      "note": "Coaching, spiritual wellness, Hispanic-business, and local directories"
+    }
+  },
+  "goals": [
+    { "channel": "Instagram", "metric": "Posts/wk & saves", "baseline": "3 posts · 495 followers", "target30": "Set together in week 1", "target90": "Set together in week 1", "progressPct": 0 },
+    { "channel": "Website (EN / ES)", "metric": "Qualified inquiries", "baseline": "No site yet", "target30": "Set together in week 1", "target90": "Set together in week 1", "progressPct": 0 },
+    { "channel": "YouTube & TikTok", "metric": "Episodes & clips", "baseline": "Not on camera yet", "target30": "Set together in week 1", "target90": "Set together in week 1", "progressPct": 0 },
+    { "channel": "Newsletter (Beehiiv)", "metric": "Opt-in subscribers", "baseline": "No list yet", "target30": "Set together in week 1", "target90": "Set together in week 1", "progressPct": 0 },
+    { "channel": "Bookings & consultations", "metric": "Completed sessions", "baseline": "No online booking yet", "target30": "Set together in week 1", "target90": "Set together in week 1", "progressPct": 0 }
+  ],
+  "weeklySummary": {
+    "weekLabel": "Sample week · Nov 16 – Nov 22",
+    "bullets": [
+      "The bilingual carousel on what a first session feels like earned the most saves this week, especially from Spanish-speaking readers.",
+      "Fourteen people inquired across the website and Instagram, with nine booking a free intro consultation and six confirming a full session.",
+      "The first Take Un Momentico episode held viewers for an average of 19 minutes, giving us eight calm short clips for next week.",
+      "Two bilingual South Florida podcasts replied to guest pitches, and seven local directory listings are now verified.",
+      "For you this week: two post batches are waiting for your OK, plus two inquiry replies and one testimonial permission check."
+    ]
+  },
+  "monthlyReport": {
+    "monthLabel": "Sample Monthly Report · Month 2 Preview",
+    "headline": "Steady, grounded visibility built from one monthly conversation",
+    "highlights": [
+      { "label": "Website visits", "value": "428", "sub": "57% EN · 43% ES" },
+      { "label": "Inquiries", "value": "14", "sub": "28% booking-page conversion" },
+      { "label": "Sessions paid", "value": "6", "sub": "Sample count via Cal.com + Stripe" },
+      { "label": "Newsletter readers", "value": "84", "sub": "48.2% open rate on Beehiiv" }
+    ],
+    "whatWorked": [
+      "Educational 'first session' and 'messages from loved ones' posts brought calmer, higher-trust inquiries than general quotes.",
+      "Bilingual pages performed nearly evenly (57% English, 43% Spanish), confirming strong demand for Spanish-language clarity.",
+      "Clipping Take Un Momentico into 8 short reflections covered two full weeks of Reels and Shorts from a single sitting."
+    ],
+    "nextMonth": [
+      "Confirm 30- and 90-day KPI targets together from real week-1 baselines.",
+      "Record Episode 2 of Take Un Momentico with your chosen guest or Q&A format.",
+      "Publish approved client testimonials on the website and open Google review invitations."
+    ]
+  },
+  "connections": [
+    { "source": "Instagram & Meta Business Suite", "status": "Not connected yet", "feeds": "Followers, reach, saves, Reels & carousel performance", "how": "Invite brandon@gil.marketing as admin in Meta Business Suite" },
+    { "source": "YouTube", "status": "Not connected yet", "feeds": "Episode watch time, Shorts views, subscribers", "how": "Add brandon@gil.marketing as channel manager" },
+    { "source": "TikTok", "status": "Not connected yet", "feeds": "Clip views, retention, follower growth", "how": "Connect via business account access — no password shared" },
+    { "source": "LinkedIn", "status": "Not connected yet", "feeds": "Profile views, post impressions, workplace inquiries", "how": "Confirm existing profile and add page access if opened" },
+    { "source": "Facebook", "status": "Not connected yet", "feeds": "Local South Florida page reach and shares", "how": "Included via Meta Business Suite admin invite" },
+    { "source": "Google Analytics & Search Console", "status": "Not connected yet", "feeds": "Website visits, top pages, search queries, conversions", "how": "Grant viewer/editor access to brandon@gil.marketing" },
+    { "source": "Google Business Profile", "status": "Not connected yet", "feeds": "Local map views, website taps, client reviews", "how": "Add brandon@gil.marketing as manager (if seeing in person)" },
+    { "source": "Cal.com", "status": "Not connected yet", "feeds": "Free consultations, sessions booked, calendar availability", "how": "Set up under Un Momentico LLC with team access" },
+    { "source": "Stripe", "status": "Not connected yet", "feeds": "Sessions paid and revenue trend (under Un Momentico LLC)", "how": "Standard read/reporting role for brandon@gil.marketing" },
+    { "source": "Beehiiv", "status": "Not connected yet", "feeds": "Newsletter subscribers, open rate, reader replies", "how": "Add brandon@gil.marketing as team member" },
+    { "source": "X (optional)", "status": "Not connected yet", "feeds": "Short post impressions and link clicks", "how": "Optional — connect only if you want a light presence there" }
+  ]
+}

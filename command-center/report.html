@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Un Momentico &mdash; Sample Monthly Report</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/command.css">
+  <script src="assets/report.js" defer></script>
+</head>
+<body>
+  <div class="sample-banner" role="region" aria-label="Sample data notice">
+    <span class="sample-banner-main">
+      <span class="sample-banner-dot" aria-hidden="true"></span>
+      <span>Sample data: your real numbers appear once accounts are connected</span>
+    </span>
+    <span class="sample-banner-sub">Printable monthly summary preview</span>
+  </div>
+
+  <header class="topbar no-print">
+    <a class="brand-lockup" href="index.html">
+      <svg class="fan" viewBox="-4.8 -4.8 89.6 44.8" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><path d="M17.7,40.0 L4.0,40.0 A36.0,36.0 0 0 1 7.6,24.4 L19.9,30.3 A22.3,22.3 0 0 0 17.7,40.0Z" fill="#2F5D50" fill-opacity="0.88"/><path d="M19.9,30.3 L7.6,24.4 A36.0,36.0 0 0 1 17.6,11.9 L26.1,22.5 A22.3,22.3 0 0 0 19.9,30.3Z" fill="#C99A5B" fill-opacity="0.88"/><path d="M26.1,22.5 L17.6,11.9 A36.0,36.0 0 0 1 32.0,4.9 L35.0,18.2 A22.3,22.3 0 0 0 26.1,22.5Z" fill="#C47C6E" fill-opacity="0.88"/><path d="M35.0,18.2 L32.0,4.9 A36.0,36.0 0 0 1 48.0,4.9 L45.0,18.2 A22.3,22.3 0 0 0 35.0,18.2Z" fill="#9DBDB0" fill-opacity="0.88"/><path d="M45.0,18.2 L48.0,4.9 A36.0,36.0 0 0 1 62.4,11.9 L53.9,22.5 A22.3,22.3 0 0 0 45.0,18.2Z" fill="#E2C690" fill-opacity="0.88"/><path d="M53.9,22.5 L62.4,11.9 A36.0,36.0 0 0 1 72.4,24.4 L60.1,30.3 A22.3,22.3 0 0 0 53.9,22.5Z" fill="#3E6E5F" fill-opacity="0.88"/><path d="M60.1,30.3 L72.4,24.4 A36.0,36.0 0 0 1 76.0,40.0 L62.3,40.0 A22.3,22.3 0 0 0 60.1,30.3Z" fill="#B9796A" fill-opacity="0.88"/><path d="M31.4,40.0 L17.7,40.0 A22.3,22.3 0 0 1 28.8,20.7 L35.7,32.5 A8.6,8.6 0 0 0 31.4,40.0Z" fill="#9DBDB0" fill-opacity="0.8"/><path d="M35.7,32.5 L28.8,20.7 A22.3,22.3 0 0 1 51.2,20.7 L44.3,32.5 A8.6,8.6 0 0 0 35.7,32.5Z" fill="#3E6E5F" fill-opacity="0.8"/><path d="M44.3,32.5 L51.2,20.7 A22.3,22.3 0 0 1 62.3,40.0 L48.6,40.0 A8.6,8.6 0 0 0 44.3,32.5Z" fill="#D7B57A" fill-opacity="0.8"/><path d="M31.4,40.0 A8.6,8.6 0 0 1 48.6,40.0Z" fill="#E2C690" fill-opacity=".95"/><g fill="none" stroke="#1E3A32" stroke-width="1.6" stroke-linejoin="round"><path d="M4.0,40.0 A36.0,36.0 0 0 1 76.0,40.0"/><path d="M17.7,40.0 A22.3,22.3 0 0 1 62.3,40.0"/><path d="M31.4,40.0 A8.6,8.6 0 0 1 48.6,40.0"/><line x1="19.9" y1="30.3" x2="7.6" y2="24.4"/><line x1="26.1" y1="22.5" x2="17.6" y2="11.9"/><line x1="35.0" y1="18.2" x2="32.0" y2="4.9"/><line x1="45.0" y1="18.2" x2="48.0" y2="4.9"/><line x1="53.9" y1="22.5" x2="62.4" y2="11.9"/><line x1="60.1" y1="30.3" x2="72.4" y2="24.4"/><line x1="35.7" y1="32.5" x2="28.8" y2="20.7"/><line x1="44.3" y1="32.5" x2="51.2" y2="20.7"/><line x1="2.0" y1="39.2" x2="78.0" y2="39.2"/></g><path d="M1.4,40.0 A38.6,38.6 0 0 1 78.6,40.0" fill="none" stroke="#1E3A32" stroke-width="3.5"/></svg>
+      <span>
+        <span class="brand-name">Un Momentico</span>
+        <span class="brand-sub">Monthly Report &middot; Sample</span>
+      </span>
+    </a>
+    <div class="topbar-actions">
+      <a class="btn ghost" href="index.html">&larr; Back to Command Center</a>
+      <button type="button" class="btn primary" onclick="window.print()">Print / Save PDF</button>
+    </div>
+  </header>
+
+  <main class="report-sheet">
+    <div class="report-head">
+      <div>
+        <span class="sec-kicker" id="rep-month-label">Sample Monthly Report</span>
+        <h1 style="font-size:clamp(1.7rem,1.4rem+1.1vw,2.35rem);color:var(--monte)" id="rep-headline">Steady, grounded visibility built from one monthly conversation</h1>
+        <p style="margin:6px 0 0;color:var(--muted);font-size:14px">Prepared for Danny Cabrera &middot; Un Momentico Coaching Group &middot; Sample numbers only (no specific prices shown)</p>
+      </div>
+      <span class="sample-tag">Sample Report</span>
+    </div>
+
+    <div class="report-highlights" id="rep-highlights"></div>
+
+    <div class="grid-2" style="margin-bottom:18px">
+      <div class="subcard">
+        <div class="subcard-head"><h3>What worked best</h3><span class="sample-tag">Sample</span></div>
+        <ul class="summary-list" id="rep-worked"></ul>
+      </div>
+      <div class="subcard">
+        <div class="subcard-head"><h3>Focus for next month</h3><span class="sample-tag">Sample</span></div>
+        <ul class="summary-list" id="rep-next"></ul>
+      </div>
+    </div>
+
+    <div class="subcard" style="margin-bottom:18px">
+      <div class="subcard-head"><h3>Channel snapshot</h3><span class="sample-tag">Sample</span></div>
+      <div class="table-wrap">
+        <table class="clean-table">
+          <thead>
+            <tr>
+              <th>Channel</th>
+              <th>Focus</th>
+              <th class="num">Audience</th>
+              <th class="num">30d reach / views</th>
+              <th class="num">Engagement</th>
+            </tr>
+          </thead>
+          <tbody id="rep-platforms"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="reassure-box" style="margin-top:0">
+      <span><strong>Targets &amp; real numbers:</strong> 30- and 90-day KPI targets are set together with you in week 1. Once accounts connect via <code>brandon@gil.marketing</code> admin access, this monthly report updates from real data automatically.</span>
+    </div>
+  </main>
+</body>
+</html>
